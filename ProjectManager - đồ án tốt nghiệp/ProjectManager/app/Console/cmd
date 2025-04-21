@@ -1,0 +1,34 @@
+===== q-read: git command
+
+git add .
+git commit -m "Làm thêm cái import/export đi" 
+git push
+git status
+
+clear
+
+===== q-read: storage link command
+
+rm public/storage -Recurse -Force
+php artisan storage:link
+clear
+
+===== q-read: db reset command
+php artisan make:migration create_user_kpis_table
+
+php artisan migrate:fresh
+php artisan db:seed    
+
+===== q-read: cache command
+
+php artisan config:clear
+php artisan cache:clear
+php artisan view:clear
+php artisan route:clear
+php artisan optimize:clear
+
+===== q-read: queue command
+
+php artisan queue:failed
+php artisan queue:retry all
+

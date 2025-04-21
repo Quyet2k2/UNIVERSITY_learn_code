@@ -1,0 +1,240 @@
+Quản lý phiên bản trong Git không chỉ giúp bạn lưu trữ lịch sử thay đổi mà còn dễ dàng làm việc nhóm, tạo nhánh phát triển và gộp lại khi cần. Dưới đây là hướng dẫn chi tiết kèm lệnh Git cho từng trường hợp:
+
+---
+
+## 1. **Khởi tạo dự án với Git**
+
+Nếu chưa có Git trong thư mục dự án, bạn chạy:
+
+```bash
+git init
+```
+
+Thêm file vào vùng tạm (staging) và commit:
+
+```bash
+git add .
+git commit -m "Khởi tạo dự án"
+```
+
+---
+
+## 2. **Kết nối với GitHub**
+
+Trước tiên, tạo repository trên GitHub rồi kết nối nó:
+
+```bash
+git remote add origin https://github.com/user/repo.git
+```
+
+Đẩy code lần đầu lên GitHub:
+
+```bash
+git branch -M main  # Đổi tên nhánh thành main nếu cần
+git push -u origin main
+```
+
+---
+
+## 3. **Làm việc với nhánh (Branching)**
+
+### Tạo nhánh mới:
+
+```bash
+git checkout -b ten-nhanh-moi
+git checkout -b version_3.1-tinh_KPI
+
+```
+
+hoặc
+
+```bash
+git branch ten-nhanh-moi
+git checkout ten-nhanh-moi
+```
+
+### Xem danh sách nhánh:
+
+```bash
+git branch
+```
+
+### Chuyển nhánh:
+
+```bash
+git checkout ten-nhanh
+git checkout main
+```
+
+### Xóa nhánh:
+
+-   Nếu nhánh đã merge:
+    ```bash
+    git branch -d ten-nhanh
+    git branch -d version_3.1-tinh_KPI
+    ```
+-   Nếu nhánh chưa merge (buộc xóa):
+
+    ```bash
+    git branch -D ten-nhanh
+    git branch -D version_3.1
+    ```
+
+---
+
+## 4. **Gộp nhánh (Merging)**
+
+### Gộp nhánh trực tiếp:
+
+1. Chuyển về nhánh cần gộp vào (thường là `main` hoặc `develop`):
+    ```bash
+    git checkout main
+    ```
+2. Gộp:
+    ```bash
+    git merge ten-nhanh-phu
+    git merge version_3.1-tinh_KPI
+    ```
+3. Nếu có xung đột (conflict), sửa xung đột rồi:
+    ```bash
+    git add .
+    git commit -m "Resolve conflict"
+    ```
+
+---
+
+## 5. **Gộp nhánh kiểu Rebase (Lịch sử sạch hơn)**
+
+### Thay vì merge, có thể dùng rebase:
+
+```bash
+git checkout ten-nhanh-phu
+git rebase main
+```
+
+Nếu có conflict:
+
+```bash
+git add .
+git rebase --continue
+```
+
+Sau khi rebase xong, về lại `main` và merge kiểu fast-forward:
+
+```bash
+git checkout main
+git merge ten-nhanh-phu --ff
+```
+
+---
+
+## 6. **Làm việc nhóm & Pull Request**
+
+1. Đẩy nhánh lên GitHub:
+    ```bash
+    git push -u origin ten-nhanh-moi
+    git push -u origin version_3.1-tinh_KPI
+    ```
+2. Trên GitHub, tạo **Pull Request** và review code trước khi merge vào `main`.
+
+---
+
+## 7. **Cập nhật code mới nhất từ GitHub**
+
+### Nếu đang làm việc trên `main`:
+
+```bash
+git pull origin main
+```
+
+### Nếu đang làm trên nhánh phụ:
+
+```bash
+git checkout main
+git pull origin main
+git checkout ten-nhanh-phu
+git merge main
+```
+
+Hoặc dùng **rebase** để giữ lịch sử commit gọn gàng:
+
+```bash
+git rebase main
+```
+
+---
+
+## 8. **Làm sạch lịch sử commit**
+
+Nếu commit lung tung và muốn gom commit:
+
+```bash
+git rebase -i HEAD~3
+```
+
+(Chọn `squash` để gộp các commit lại)
+
+---
+
+## 9. **Hoàn tác thay đổi**
+
+### Nếu chưa commit:
+
+-   Hoàn tác thay đổi tất cả file:
+    ```bash
+    git checkout .
+    ```
+-   Hoàn tác chỉ một file:
+    ```bash
+    git checkout ten-file
+    ```
+
+### Nếu đã commit nhưng chưa push:
+
+-   Quay lại commit trước đó:
+    ```bash
+    git reset --soft HEAD~1
+    ```
+-   Hủy commit hoàn toàn:
+    ```bash
+    git reset --hard HEAD~1
+    ```
+
+### Nếu đã push lên GitHub:
+
+```bash
+git revert HEAD
+git push origin main
+```
+
+---
+
+## 10. **Xóa file khỏi Git nhưng giữ lại trên máy**
+
+Nếu lỡ thêm file vào Git mà không muốn track nó nữa:
+
+```bash
+git rm --cached ten-file
+```
+
+Rồi thêm vào `.gitignore` để tránh bị commit lại.
+
+---
+
+## 11. **Clone repo từ GitHub**
+
+```bash
+git clone https://github.com/user/repo.git
+```
+
+---
+
+## 12. **Xóa một remote branch trên GitHub**
+
+```bash
+git push origin --delete ten-nhanh
+```
+
+---
+
+Đây là bộ lệnh đầy đủ giúp bạn quản lý Git hiệu quả. Cần tình huống cụ thể hơn cứ hỏi nhé! 🚀

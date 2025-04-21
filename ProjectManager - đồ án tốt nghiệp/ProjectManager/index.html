@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="./public/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./public/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+  <link href="./public/assets/fontawesome_v6_7_1/css/all_z.css" rel="stylesheet">
+
+  <link href="./public/assets/css/animate.css" rel="stylesheet">
+  <link href="./public/assets/css/style.css" rel="stylesheet">
+  <link href="./public/assets/css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+  <!-- q-read: Custom css -->
+  <link href="./public/__custom.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="hidden-toastr hidden">hi</div>
+
+
+
+  <!-- Mainly scripts -->
+  <script src="./public/assets/js/jquery-3.1.1.min.js"></script>
+  <script src="./public/assets/js/bootstrap.min.js"></script>
+  <script src="./public/assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+  <script src="./public/assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+  <!-- Flot -->
+  <script src="./public/assets/js/plugins/flot/jquery.flot.js"></script>
+  <script src="./public/assets/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+  <script src="./public/assets/js/plugins/flot/jquery.flot.spline.js"></script>
+  <script src="./public/assets/js/plugins/flot/jquery.flot.resize.js"></script>
+  <script src="./public/assets/js/plugins/flot/jquery.flot.pie.js"></script>
+  <script src="./public/assets/js/plugins/flot/jquery.flot.symbol.js"></script>
+  <script src="./public/assets/js/plugins/flot/jquery.flot.time.js"></script>
+
+  <!-- Custom and plugin javascript -->
+  <script src="./public/assets/js/inspinia.js"></script>
+  <script src="./public/assets/js/plugins/pace/pace.min.js"></script>
+
+  <!-- Sparkline -->
+  <script src="./public/assets/js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+  <script src="./public/assets/js/plugins/toastr/toastr.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      setTimeout(function () {
+        toastr.options = {
+          closeButton: true,
+          progressBar: true,
+          showMethod: 'slideDown',
+          timeOut: 0,
+          extendedTimeOut: 0  // Không tự động đóng khi hover
+        };
+        toastr.success($(".hidden-toastr").text(), 'Welcome to AHT Admin',);
+
+      }, 1300);
+      console.log($(".hidden-toastr").text());
+    });
+  </script>
+</body>
+
+</html>
