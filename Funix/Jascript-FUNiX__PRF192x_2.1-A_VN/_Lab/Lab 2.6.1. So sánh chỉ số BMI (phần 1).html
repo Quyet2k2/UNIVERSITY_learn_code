@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 2.6.1. So sánh chỉ số BMI (phần 1)</title>
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/4b263362f9ec4edf9f901a195177a213/3902863d5e314f6c99f25a5242e5c119/?activate_block_id=block-v1%3AFUNiX%2BPRF192x_2.1-A_VN%2B2022_T3%2Btype%40sequential%2Bblock%403902863d5e314f6c99f25a5242e5c119#:~:text=Lab%202.6.1.%20So%20s%C3%A1nh%20ch%E1%BB%89%20s%E1%BB%91%20BMI%20(ph%E1%BA%A7n%201) -->
+    <!-- Lab 2.6.1. So sánh chỉ số BMI (phần 1)
+
+        Mark và John đang cố so sánh chỉ số BMI (Body Mass Index) của họ, được tính bằng công thức: 
+          BMI = mass/[(height)^2)] = mass/(height*height) (mass tính bằng kg và height tính bằng mét).
+
+        1. Nhiệm vụ của bạn:
+
+        Lưu khối lượng và chiều cao của Mark và John vào các biến.
+        Tính chỉ số BMI của John và Mark theo công thức (bạn có thể tính cả hai).
+        Tạo biến Boolean 'markHigherBMI' chứa thông tin về việc liệu chỉ số BMI của Mark có cao hơn BMI của John không.
+        
+        2. Dữ liệu kiểm tra:
+        Dữ liệu 1: Mark nặng 78 kg và cao 1.69 m. John nặng 92 kg và cao 1.95 m.
+        Dữ liệu 2: Mark nặng 95 kg và cao 1.88 m. John nặng 85 kg và cao 1.76 m.-->
+    <script>
+      const massMark = 78;
+      const heightMark = 1.69;
+      const massJohn = 92;
+      const heightJohn = 1.95;
+
+      // const massMark = 95;
+      // const heightMark = 1.88;
+      // const massJohn = 85;
+      // const heightJohn = 1.76;
+
+      const MarkBMI = massMark / heightMark ** 2;
+      const JohnBMI = massJohn / heightJohn ** 2;
+      const markHigherBMI = MarkBMI > JohnBMI;
+
+      console.log(MarkBMI, JohnBMI, markHigherBMI);
+    </script>
+  </body>
+</html>

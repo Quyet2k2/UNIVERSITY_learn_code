@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 5.8.2. Cải thiện Tip calculator</title>
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/4b263362f9ec4edf9f901a195177a213/234405fcf9ca45afa80abf166cffd91e/?child=first#:~:text=Lab%205.8.2.%20C%E1%BA%A3i%20thi%E1%BB%87n%20Tip%20calculator -->
+    <!-- Lab 5.8.2. Cải thiện Tip calculator
+
+Hãy cải thiện thêm tip calculator của Steven, lần này sử dụng các vòng lặp!
+
+1. Nhiệm vụ của bạn:
+
+Tạo array 'bills' chứa tất cả 10 giá trị hóa đơn kiểm tra.
+Tạo các array rỗng cho 'tips' và 'totals'.
+Sử dụng hàm 'calcTip' mà chúng ta đã viết trước đó (không cần lặp lại) để tính các giá trị tips và totals (hóa đơn + tiền boa) cho mỗi giá trị bill trong bills array. Sử dụng vòng lặp for để thực hiện 10 phép tính!.
+2. Dữ liệu kiểm tra:
+
+22, 295, 176, 440, 37, 105, 10, 1100, 86 và 52
+Gợi ý: Gọi ‘calcTip‘ trong vòng lặp và dùng phương thức push để thêm giá trị cho các array tips và totals.
+
+Bonus: Viết hàm 'calcAverage' nhận array 'arr' làm đối số. Hàm này tính trung bình tất cả các số đã cho trong array. Đây là một thử thách khó (chúng ta chưa từng thực hiện điều này trước đây)! Dưới đây là hướng dẫn thực hiện:
+
+Trước tiên, bạn cần cộng tất cả các giá trị trong array. Để thực hiện phép cộng, tạo biến 'sum' bắt đầu từ 0. Sau đó lặp qua array, sử dụng vòng lặp for. Ở mỗi lần lặp, cộng giá trị hiện tại vào biến 'sum'. Như vậy, ở cuối vòng lặp, bạn sẽ cộng được tất cả các giá trị với nhau.
+Để tính trung bình, chia tổng mà bạn vừa tính trước đó cho độ dài của array (vì đó là số phần tử).
+Gọi hàm với array 'totals'.
+Lưu ý: 
+
+Sau khi hoàn thành bài lab ở trên, học viên lưu lại file bài làm trên máy tính cá nhân để phục vụ cho việc review lab sau này. Học viên cần hoàn thành tất cả các bài lab của môn học mới tiến hành đăng ký review.
+
+Thời gian cần thiết để hoàn thành: 30 phút -->
+    <script>
+      //
+
+      const calcTip = function (bill) {
+        return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+      };
+
+      const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+      const tips = [];
+      const totals = [];
+
+      for (var i = 0; i < bills.length; i++) {
+        tips[i] = calcTip(bills[i]);
+        totals[i] = bills[i] + tips[i];
+      }
+
+      const calcAverage = (arr) => {
+        let sum = 0;
+        for (var i = 0; i < arr.length; i++) {
+          sum += arr[i];
+        }
+        return sum / arr.length;
+      };
+
+      console.log(bills, tips, totals);
+      //   console.log(bills);
+      //   console.log(tips);
+      //   console.log(totals);
+      console.log(calcAverage(totals));
+    </script>
+  </body>
+</html>

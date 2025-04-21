@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4.5. Giới thiệu về Array (15 phút)</title>
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/4b263362f9ec4edf9f901a195177a213/a1aa69dc337f4b8bbacfe6694c0f6d6d/?child=first -->
+    <!-- Lab 4.5. Giới thiệu về Array (15 phút)
+
+Tạo một array chứa 4 giá trị dân số của 4 quốc gia bất kỳ. Bạn có thể sử dụng các giá trị đã dùng trước đó. Lưu array này vào một biến là 'populations'.
+In ra console xem liệu array có 4 phần tử hay không (true hoặc false).
+Tạo một array là 'percentages' có chứa phần trăm dân số thế giới của 4 giá trị dân số đó. Sử dụng hàm 'percentageOfWorld1' mà bạn đã tạo trước đó để tính toán 4 giá trị phần trăm.
+ -->
+    <script>
+      function percentageOfWorld1(population) {
+        return (population / 7900) * 100;
+      }
+
+      const populations = [100, 1441, 66, 6];
+
+      console.log(populations.length === 4);
+
+      const percentages = [
+        percentageOfWorld1(populations[0]),
+        percentageOfWorld1(populations[1]),
+        percentageOfWorld1(populations[2]),
+        percentageOfWorld1(populations[3]),
+      ];
+
+      //   console.log(percentages);
+    </script>
+  </body>
+</html>

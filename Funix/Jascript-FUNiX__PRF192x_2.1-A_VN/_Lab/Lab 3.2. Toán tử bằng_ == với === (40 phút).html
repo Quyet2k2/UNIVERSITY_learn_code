@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 3.2. Toán tử bằng: == với === (40 phút)</title>
+  </head>
+  <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/4b263362f9ec4edf9f901a195177a213/ddfffe242aad4b209c6a38353eee28d2/?activate_block_id=block-v1%3AFUNiX%2BPRF192x_2.1-A_VN%2B2022_T3%2Btype%40sequential%2Bblock%40ddfffe242aad4b209c6a38353eee28d2#:~:text=Lab%203.2.%C2%A0To%C3%A1n%20t%E1%BB%AD%20b%E1%BA%B1ng%3A%20%3D%3D%20v%E1%BB%9Bi%20%3D%3D%3D%20(40%20ph%C3%BAt) -->
+  <!-- Lab 3.2. Toán tử bằng: == với === (40 phút)
+
+        1. Khai báo biến 'numNeighbours' dựa trên prompt input sau: 
+          prompt('How many neighbor countries does your country have?'). 
+          Bạn có thể tìm hiểu cách sử dụng hàm prompt để lấy dữ liệu 
+          từ người dùng ở link sau.
+
+        2. Nếu chỉ có 1 neighbour, hãy in ra console 'Only 1 border!' (sử dụng ==).
+
+        3. Sử dụng else-if block để ghi 'More than 1 border' 
+        trong trường hợp 'numNeighbours' lớn hơn 1.
+
+        4. Sử dụng else block để ghi 'No borders' (block này sẽ 
+        được thực thi khi 'numNeighbours' là 0 hoặc bất kỳ giá trị nào khác).
+
+        5. Kiểm tra code với các giá trị 'numNeighbours' khác nhau, gồm 1 và 0.
+
+        6. Thay == thành ===, và kiểm tra lại code với các giá trị 
+        'numNeighbours' tương tự. Điều gì sẽ xảy ra khi 
+        numNeighbours = 1? Tại sao lại như vậy?
+
+        7. Cuối cùng, chuyển đổi 'numNeighbours' thành một số, 
+        và xem điều gì sẽ xảy ra khi bạn nhập vào 1.
+
+        8. Hãy nêu lý do chúng ta nên sử dụng toán tử === và 
+        chuyển đổi kiểu trong trường hợp này. -->
+  <body>
+    <script>
+      // 1
+      const numNeighbours = Number(
+        prompt("How many neighbor countries does your country have?")
+      );
+
+      // 2
+      if (numNeighbours === 1) console.log("Only 1 border!");
+      // 3
+      else if (numNeighbours > 1) console.log("More than 1 border");
+      // 4
+      else console.log("No border");
+
+      // 5: kiểm tra so sánh == với dữ liệu là 0, 1, 2
+      // numNeighbours == 1 || numNeighbours == 0
+      //   ? console.log("numNeighbours == " + numNeighbours)
+      //   : console.log("numNeighbours != 0 AND numNeighbours != 1");
+
+      // // 6: (Thay == sang ===). Giải thích:
+      // //      Vì khi nhập prompt, dữ liệu đầu vào là một chuỗi
+      // //      vậy nên dữ liệu sẽ !== number,
+      // //      "1" === 1 => false
+      // numNeighbours === 1 || numNeighbours === 0
+      //   ? console.log("numNeighbours === " + numNeighbours)
+      //   : console.log("numNeighbours !== 0 AND numNeighbours !== 1");
+
+      // // 7: chuyển prompt từ chuỗi sang dạng Number!
+      // console.log(`numNeighbours = ${Number(numNeighbours)}`);
+
+      // 8: Để đảm bảo tính đúng đắn của chương trình!
+      // Phòng tránh 1 số trường hợp dùng == sẽ có bug
+      // làm chương trình chạy sai
+
+      // để kiểm tra tính nghiêm ngặt (strict)
+      // khi xử lý yêu cầu của người dùng, tránh lỗi chương trình.
+    </script>
+  </body>
+</html>

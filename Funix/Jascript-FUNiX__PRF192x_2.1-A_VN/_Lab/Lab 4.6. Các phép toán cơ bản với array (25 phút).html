@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4.6. Các phép toán cơ bản với array (25 phút)</title>
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/4b263362f9ec4edf9f901a195177a213/a1aa69dc337f4b8bbacfe6694c0f6d6d/?child=first#:~:text=Lab%204.6.%C2%A0C%C3%A1c%20ph%C3%A9p%20to%C3%A1n%20c%C6%A1%20b%E1%BA%A3n%20v%E1%BB%9Bi%20array%20(25%20ph%C3%BAt) -->
+    <!-- Lab 4.6. Các phép toán cơ bản với array (25 phút)
+
+Tạo một array chứa tất cả các nước láng giềng của một nước bất kỳ. Chọn một nước có ít nhất 2 hoặc 3 nước láng giềng. Lưu array vào biến 'neighbours'.
+Ở một số thời điểm, một đất nước mới là 'Utopia' được tạo ra trong vùng lân cận của quốc gia bạn chọn. Vậy hãy thêm nó vào cuối array 'neighbours'.
+Không may, sau một thời gian, nước mới này biến mất. Vậy hãy xóa nó khỏi cuối array.
+Nếu array 'neighbours' không chứa nước 'Germany', hãy in ra console rằng: 'Probably not a central European country :D'.
+Thay đổi tên của một trong các nước láng giềng của bạn. Để thực hiện điều đó, hãy tìm chỉ mục của đất nước trong array 'neighbours', rồi sử dụng nó để thay đổi array ở vị trí chỉ mục đó. Chẳng hạn, nếu bạn tìm thấy 'Sweden' trong array, hãy thay nó bằng 'Republic of Sweden'.
+Lưu ý: Sau khi hoàn thành bài lab ở trên, học viên lưu lại file bài làm trên máy tính cá nhân để phục vụ cho việc review lab sau này. Học viên cần hoàn thành tất cả các bài lab của môn học mới tiến hành đăng ký review. -->
+    <script>
+      // 1
+      const neightbours = [
+        "Cộng hòa nhân dân Trung Hoa",
+        "Cộng hòa dân chủ nhân dân Lào",
+        "Vương quốc Cămpuchia",
+      ];
+      console.log(neightbours);
+
+      //   2
+      neightbours.push("Utopia");
+      console.log(neightbours);
+
+      //   3
+      neightbours.pop();
+      console.log(neightbours);
+
+      //   4
+      if (!neightbours.includes("Germany"))
+        console.log("Probably not a central European country :D'.");
+
+      //   5
+      neightbours[neightbours.indexOf("Cộng hòa nhân dân Trung Hoa")] =
+        "Republic of China";
+      console.log(neightbours);
+    </script>
+  </body>
+</html>

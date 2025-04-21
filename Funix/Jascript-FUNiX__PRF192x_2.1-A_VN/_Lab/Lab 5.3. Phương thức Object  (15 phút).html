@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 5.3. Phương thức Object (15 phút)</title>
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/4b263362f9ec4edf9f901a195177a213/234405fcf9ca45afa80abf166cffd91e/?child=first#:~:text=Lab%205.3.%20Ph%C6%B0%C6%A1ng%20th%E1%BB%A9c%20Object%C2%A0%20(15%20ph%C3%BAt) -->
+    <!-- Lab 5.3. Phương thức Object  (15 phút)
+
+Thêm một phương thức có tên là 'describe' vào object 'myCountry'. Phương thức này sẽ in một string ra console với nội dung như sau: "Finland has 6 million finnish-speaking people, 3 neighbouring countries and a capital called Helsinki" nhưng lần này sử dụng từ khóa 'this'.
+Gọi phương thức 'describe' 
+Thêm phương thức 'checkIsland' vào object 'myCountry'. Phương thức này sẽ thiết lập một thuộc tính mới trên object là 'isIsland'. 'isIsland' sẽ là giá trị true nếu không có nước láng giềng, ngược lại là false. Sử dụng toán tử điều kiện để đặt giá trị cho thuộc tính. -->
+    <script>
+      //
+      const myCountry = {
+        country: "Finland",
+        capital: "Helsinki",
+        language: "finnish",
+        population: 6,
+        neighbours: ["Thụy Điển", "Na Uy", "Nga"],
+
+        describe: function () {
+          // 'Finland has 6 million finnish-speaking people, 3 neighbouring countries and a capital called Helsinki.'
+          console.log(
+            `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.'`
+          );
+        },
+
+        checkIsland: function () {
+          this.neighbours.length === 0
+            ? (this.isIsLand = true)
+            : (this.isIsLand = false);
+        },
+      };
+
+      myCountry.describe();
+      myCountry.checkIsland();
+      console.log(myCountry);
+    </script>
+  </body>
+</html>

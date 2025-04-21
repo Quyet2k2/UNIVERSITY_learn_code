@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 2.5. Đưa ra quyết định: Câu lệnh if/else (10 phút)</title>
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/4b263362f9ec4edf9f901a195177a213/3902863d5e314f6c99f25a5242e5c119/?activate_block_id=block-v1%3AFUNiX%2BPRF192x_2.1-A_VN%2B2022_T3%2Btype%40sequential%2Bblock%403902863d5e314f6c99f25a5242e5c119#:~:text=Lab%202.5.%20%C4%90%C6%B0a%20ra%20quy%E1%BA%BFt%20%C4%91%E1%BB%8Bnh%3A%20C%C3%A2u%20l%E1%BB%87nh%20if/else%20(10%20ph%C3%BAt) -->
+    <!-- Lab 2.5. Đưa ra quyết định: Câu lệnh if/else (10 phút)
+
+        1. Nếu dân số của nước bạn có hơn 33 triệu người, hãy in string sau ra console: 
+            '<country>'s population is above average'. Nếu không hãy in ra một string như thế này: 
+            '<country>'s population is < 33 - population > million below average' . 
+            Ví dụ dân số của Hà Lan là 18 triệu người, bạn sẽ cần in ra "Nederland's population is 15 million below average" 
+            (15 là lấy 33 - 18).
+
+        2. Sau khi kiểm tra kết quả, thay đổi giá trị biến population tạm thời thành 13, 
+            sau đó thành 130. Quan sát các kết quả khác nhau và đặt giá trị trở lại ban đầu.
+
+        Lưu ý:  Sau khi hoàn thành bài lab ở trên, học viên lưu lại file bài làm trên máy tính cá nhân 
+            để phục vụ cho việc review lab sau này. Học viên cần hoàn thành tất cả các bài lab 
+            của môn học mới tiến hành đăng ký review.-->
+    <script>
+      const country = "VietNam";
+      const continent = "Asia";
+      let population = 100;
+
+      console.log(typeof country);
+      console.log(typeof continent);
+      console.log(typeof population);
+
+      ////////////////////// Lab 2.1
+      const isIsland = false;
+      const language = "Vietnamese";
+      console.log(typeof isIsland);
+      console.log(typeof language);
+
+      ////////////////////// Lab 2.2
+      // country = "VietNam";
+      // continent = "Asia";
+      population = 100;
+      // isIsland = false;
+      // language = "Vietnamese";
+
+      ////////////////////// Lab 2.3
+      console.log(population / 2);
+      console.log(population++);
+
+      if (population > 6) {
+        console.log(
+          `Dân số ${country} là ${population} triệu người, lớn hơn dân số Phần Lan là 6 triệu người!`
+        );
+      } else {
+        console.log(
+          `Dân số ${country} là ${population} triệu người, nhỏ hơn dân số Phần Lan là 6 triệu người!`
+        );
+      }
+
+      if (population > 33) {
+        console.log(
+          `Dân số ${country} là ${population} triệu người, lớn hơn dân số trung bình của 1 quốc gia là 33 triệu người!`
+        );
+      } else {
+        console.log(
+          `Dân số ${country} là ${population} triệu người, nhỏ hơn dân số trung bình của 1 quốc gia là 33 triệu người!`
+        );
+      }
+
+      ////////////////////// Lab 2.4
+
+      const description = `${country} and its ${population} million people speak ${language}`;
+      console.log(description);
+
+      ////////////////////// Lab 2.5
+      if (population > 33) {
+        console.log(`${country}'s population is above average`);
+      } else {
+        console.log(
+          `${country}'s population is ${33 - population} million below average'`
+        );
+      }
+
+      population = 13;
+      if (population > 33) {
+        console.log(`${country}'s population is above average`);
+      } else {
+        console.log(
+          `${country}'s population is ${33 - population} million below average'`
+        );
+      }
+
+      population = 130;
+      if (population > 33) {
+        console.log(`${country}'s population is above average`);
+      } else {
+        console.log(
+          `${country}'s population is ${33 - population} million below average'`
+        );
+      }
+    </script>
+  </body>
+</html>

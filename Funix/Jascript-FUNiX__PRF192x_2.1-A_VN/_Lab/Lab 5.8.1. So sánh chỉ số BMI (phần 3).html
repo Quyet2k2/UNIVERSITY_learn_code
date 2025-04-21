@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 5.8.1. So sánh chỉ số BMI (phần 3)</title>
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/4b263362f9ec4edf9f901a195177a213/234405fcf9ca45afa80abf166cffd91e/?child=first#:~:text=Lab%205.8.1.%20So%20s%C3%A1nh%20ch%E1%BB%89%20s%E1%BB%91%20BMI%20(ph%E1%BA%A7n%203) -->
+    <!-- Lab 5.8.1. So sánh chỉ số BMI (phần 3)
+
+Hãy quay lại lab 2.6: So sánh chỉ số BMI của Mark và John! Lần này, hãy dùng object để triển khai các phép tính! Nhớ rằng: BMI = mass/[(height)^2)] = mass/(height*height) (mass tính bằng kg và height tính bằng mét)
+
+1. Nhiệm vụ của bạn:
+
+Với mỗi người (Mark Miller và John Smith), hãy tạo một object có các thuộc tính như full name, mass, and height 
+Tạo phương thức 'calcBMI' ở mỗi object để tính BMI (phương thức như nhau ở cả hai object). Lưu giá trị BMI vào một thuộc tính và trả về từ phương thức.
+In ra console người có BMI cao hơn cùng với tên đầy đủ và BMI tương ứng. Ví dụ: "John's BMI (28.3) is higher than Mark's (23.9)!"
+2. Dữ liệu kiểm tra:
+
+Marks nặng 78 kg và cao 1m69. John nặng 92kg và cao 1m95. -->
+    <script>
+      //
+      const mark = {
+        fullName: "Mark Miller",
+        mass: 78,
+        height: 1.69,
+
+        calcBMI: function () {
+          this.bmi = this.mass / this.height ** 2;
+          return this.bmi;
+        },
+      };
+
+      const john = {
+        fullName: "John Smith",
+        mass: 92,
+        height: 1.95,
+
+        calcBMI: function () {
+          this.bmi = this.mass / this.height ** 2;
+          return this.bmi;
+        },
+      };
+
+      mark.calcBMI();
+      john.calcBMI();
+
+      // "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!"
+
+      if (mark.bmi > john.bmi) {
+        console.log(
+          `${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})!`
+        );
+      } else if (john.bmi > mark.bmi) {
+        console.log(
+          `${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})!`
+        );
+      } else if (john.bmi === mark.bmi) {
+        console.log(
+          `Both ${john.fullName}'s BMI (${john.bmi}) and ${mark.fullName}'s BMI (${mark.bmi}) is the same!`
+        );
+      } else {
+        console.log(
+          `Both ${john.fullName}'s BMI (${john.bmi}) and ${mark.fullName}'s BMI (${mark.bmi}) 
+          I don't know that how is call it :))`
+        );
+      }
+    </script>
+  </body>
+</html>

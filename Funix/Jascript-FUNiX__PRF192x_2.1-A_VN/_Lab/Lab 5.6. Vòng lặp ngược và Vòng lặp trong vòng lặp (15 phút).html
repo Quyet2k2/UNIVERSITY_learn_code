@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 5.6. Vòng lặp ngược và Vòng lặp trong vòng lặp (15 phút)</title>
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/4b263362f9ec4edf9f901a195177a213/234405fcf9ca45afa80abf166cffd91e/?child=first#:~:text=Lab%205.6.%C2%A0V%C3%B2ng%20l%E1%BA%B7p%20ng%C6%B0%E1%BB%A3c%20v%C3%A0%20V%C3%B2ng%20l%E1%BA%B7p%20trong%20v%C3%B2ng%20l%E1%BA%B7p%20(15%20ph%C3%BAt) -->
+    <!-- Lab 5.6. Vòng lặp ngược và Vòng lặp trong vòng lặp (15 phút)
+
+Lưu trữ array của những array này vào biến 'listOfNeighbours' [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
+Nếu như các mảng con có ít nhất hai phần tử, in ra lần lượt phần tử từ thứ 2 trở đi. Ví dụ với dữ liệu như trên sẽ in ra
+Mexico
+
+Sweden
+
+Russia
+
+3. Bạn sẽ cần một vòng lặp bên trong vòng lặp cho điều này. Điều này thực sự hơi phức tạp, vì vậy đừng lo lắng nếu nó quá khó đối với bạn! Bạn sẽ giải quyết được vấn đề này.  -->
+    <script>
+      const listOfNeighbours = [
+        ["Canada", "Mexico"],
+        ["Spain"],
+        ["Norway", "Sweden", "Russia"],
+      ];
+
+      for (let i = 0; i < listOfNeighbours.length; i++) {
+        for (let j = 1; j < listOfNeighbours[i].length; j++) {
+          console.log(listOfNeighbours[i][j]);
+        }
+      }
+    </script>
+  </body>
+</html>

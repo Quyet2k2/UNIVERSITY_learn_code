@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="._1_SlideChapter2.C1_Page56_TextView_EditText_CheckBox_Btn_ImageButton">
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_hoa_don"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFF00"
+            android:text="Thông tin hóa đơn"
+            android:textColor="#000" />
+
+        <LinearLayout
+            android:id="@+id/groupLayout_khach_hang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_hoa_don">
+
+            <TextView
+                android:id="@+id/txt_ten_kh"
+                android:layout_width="@dimen/txt_width_page56_slide_chapter2"
+                android:layout_height="wrap_content"
+                android:text="Tên Khách Hàng: " />
+
+            <EditText
+                android:id="@+id/edit_ten_kh"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/min_height_view"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/groupLayout_sach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/groupLayout_khach_hang">
+
+            <TextView
+                android:id="@+id/txtSL"
+                android:layout_width="@dimen/txt_width_page56_slide_chapter2"
+                android:layout_height="wrap_content"
+                android:text="Số lượng sách: " />
+
+            <EditText
+                android:id="@+id/edit_sl_sach"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/min_height_view"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Count" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/groupLayout_VIP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/groupLayout_sach">
+
+            <CheckBox
+                android:id="@+id/cb_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="100sp" />
+
+            <TextView
+                android:id="@+id/txt_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Khách hàng là VIP"
+                android:textColor="#000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SumL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/groupLayout_VIP">
+
+            <TextView
+                android:id="@+id/txt_thanh_tien"
+                android:layout_width="@dimen/txt_width_page56_slide_chapter2"
+                android:layout_height="wrap_content"
+                android:text="Thành tiền: " />
+
+            <EditText
+                android:id="@+id/edit_thanh_tien"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/min_height_view"
+                android:layout_weight="1"
+
+                android:background="#C6C3C6"
+                android:gravity="center"
+                android:hint="Total Money"
+                android:inputType="none"
+                android:textColor="#288A28" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/groupLayout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/SumL">
+
+            <Button
+                android:id="@+id/btn_thanh_tien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="Tính TT" />
+
+
+            <Button
+                android:id="@+id/btn_tiep"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/min_height_view"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="Tiếp" />
+
+            <Button
+                android:id="@+id/btn_thong_ke"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/min_height_view"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="Thống kê" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_thong_ke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/groupLayout_btn"
+            android:background="#FFFF00"
+            android:text="Thông tin thống kê:"
+            android:textColor="#000" />
+
+        <LinearLayout
+            android:id="@+id/groupLayout_tong_so_kh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_thong_ke">
+
+            <TextView
+                android:id="@+id/txt_tong_so_kh"
+                android:layout_width="@dimen/txt_width_page56_slide_chapter2"
+                android:layout_height="wrap_content"
+                android:text="Tổng số KH: " />
+
+            <EditText
+                android:id="@+id/edit_tong_so_kh"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/min_height_view"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Total Customers" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/groupLayout_tong_so_kh_VIP"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/min_height_view"
+            android:layout_below="@+id/groupLayout_tong_so_kh">
+
+            <TextView
+                android:id="@+id/txt_tong_so_kh_VIP"
+                android:layout_width="@dimen/txt_width_page56_slide_chapter2"
+                android:layout_height="wrap_content"
+                android:text="Tổng số KH là VIP: " />
+
+            <EditText
+                android:id="@+id/edit_tong_so_kh_VIP"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/min_height_view"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Total VIP Customers" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/groupLayout_tong_doanh_thu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/min_height_view"
+            android:layout_below="@+id/groupLayout_tong_so_kh_VIP">
+
+            <TextView
+                android:id="@+id/txt_tong_doanh_thu"
+                android:layout_width="@dimen/txt_width_page56_slide_chapter2"
+                android:layout_height="wrap_content"
+                android:text="Tổng doanh thu: " />
+
+            <EditText
+                android:id="@+id/edit_tong_doanh_thu"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/min_height_view"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Sum" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/RowColor"
+            android:layout_width="match_parent"
+            android:layout_height="18sp"
+            android:layout_below="@+id/groupLayout_tong_doanh_thu"
+            android:background="#008284" />
+
+        <ImageButton
+            android:id="@+id/btnExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RowColor"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:importantForAccessibility="no"
+            android:src="@mipmap/ic_launcher"
+            android:text="Exit" />
+    </RelativeLayout>
+
+</ScrollView>

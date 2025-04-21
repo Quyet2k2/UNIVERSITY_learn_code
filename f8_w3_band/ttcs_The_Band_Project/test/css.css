@@ -1,0 +1,20 @@
+/* định nghĩa các phần tử và lớp trong HTML */
+body {
+  background-color: #f2f2f2; /* màu nền của trang */
+  font-family: Arial, sans-serif; /* kiểu font chữ của trang */
+  font-size: 16px; /* kích thước font chữ mặc định */
+  margin: 0; /* xóa khoảng cách giữa khung và nội dung của trang */
+  padding: 0; /* xóa khoảng cách giữa phần tử và nội dung bên trong nó */
+}
+
+h1 {
+  color: #333; /* màu chữ tiêu đề */
+  font-size: 24px; /* kích thước font chữ tiêu đề */
+  margin-top: 20px; /* khoảng cách giữa tiêu đề và nội dung trang */
+}
+
+p {
+  color: #666; /* màu chữ của nội dung trang */
+  line-height: 1.5; /* khoảng cách giữa các dòng của nội dung trang */
+  margin-top: 10px; /* khoảng cách giữa các đoạn của nội dung trang */
+}

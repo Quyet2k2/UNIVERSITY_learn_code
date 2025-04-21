@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 2.6.2. So sánh chỉ số BMI (phần 2)</title>
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/4b263362f9ec4edf9f901a195177a213/3902863d5e314f6c99f25a5242e5c119/?activate_block_id=block-v1%3AFUNiX%2BPRF192x_2.1-A_VN%2B2022_T3%2Btype%40sequential%2Bblock%403902863d5e314f6c99f25a5242e5c119#:~:text=Lab%202.6.2.%C2%A0So%20s%C3%A1nh%20ch%E1%BB%89%20s%E1%BB%91%20BMI%20(ph%E1%BA%A7n%202) -->
+    <!-- Lab 2.6.2. So sánh chỉ số BMI (phần 2)
+
+        Sử dụng ví dụ về BMI từ Lab 2.6.1 và code bạn đã viết để cải thiện lại.
+
+        1. Nhiệm vụ của bạn:
+
+          In một output tốt ra console, hiển thị ai có chỉ số BMI cao hơn. Thông báo hiển thị sẽ là 
+          "Mark's BMI is higher than John's!"  hoặc "John's BMI is higher than Mark's!".
+          Sử dụng template literal bao gồm các giá trị BMI trong output. 
+          Ví dụ: "Mark's BMI (28.3) is higher than John's (23.9)!”.
+          Gợi ý: Sử dụng câu lệnh if/else.
+
+        Lưu ý: 
+
+        Sau khi hoàn thành bài lab ở trên, học viên lưu lại file bài làm trên máy tính cá nhân 
+        để phục vụ cho việc review lab sau này. Học viên cần hoàn thành tất cả các bài lab của 
+        môn học mới tiến hành đăng ký review.
+
+        Thời gian cần thiết để hoàn thành: 30 phút-->
+    <script>
+      // const massMark = 78;
+      // const heightMark = 1.69;
+      // const massJohn = 92;
+      // const heightJohn = 1.95;
+
+      const massMark = 95;
+      const heightMark = 1.88;
+      const massJohn = 85;
+      const heightJohn = 1.76;
+
+      const MarkBMI = massMark / heightMark ** 2;
+      const JohnBMI = massJohn / heightJohn ** 2;
+      const markHigherBMI = MarkBMI > JohnBMI;
+      console.log(MarkBMI, JohnBMI, markHigherBMI);
+
+      if (MarkBMI > JohnBMI) {
+        console.log("Mark's BMI is higher than John's!");
+      } else {
+        console.log("John's BMI is higher than Mark's!");
+      }
+
+      if (MarkBMI > JohnBMI) {
+        console.log(
+          `Mark's BMI (${MarkBMI}) is higher than John's (${JohnBMI})!`
+        );
+      } else {
+        console.log(
+          `John's BMI (${JohnBMI} is higher than Mark's (${MarkBMI})!`
+        );
+      }
+    </script>
+  </body>
+</html>

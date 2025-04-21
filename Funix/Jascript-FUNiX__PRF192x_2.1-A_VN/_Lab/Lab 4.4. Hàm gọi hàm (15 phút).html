@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4.4. Hàm gọi hàm (15 phút)</title>
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/4b263362f9ec4edf9f901a195177a213/a1aa69dc337f4b8bbacfe6694c0f6d6d/?child=first#:~:text=Lab%204.4.%C2%A0H%C3%A0m%20g%E1%BB%8Di%20h%C3%A0m%20(15%20ph%C3%BAt) -->
+    <!-- Lab 4.4. Hàm gọi hàm (15 phút)
+
+Tạo một hàm là 'describePopulation'. Sử dụng kiểu hàm mà bạn muốn nhất. Hàm này nhận hai đối số là 'country' và 'population', và trả về string như sau: 'China has 1441 million people, which is about 18.2% of the world'.
+Để tính phần trăm 'describePopulation', hãy gọi 'percentageOfWorld1' mà bạn đã tạo trước đó.
+Gọi 'describePopulation' với dữ liệu cho 3 nước bất kỳ. -->
+
+    <script>
+      function percentageOfWorld1(population) {
+        return (population / 7900) * 100;
+      }
+
+      const describePopulation = (country, population) =>
+        `${country} has ${population} million people, which is about 
+        ${percentageOfWorld1(population)}% of the world`;
+
+      console.log(describePopulation("VietNam", 100));
+      console.log(describePopulation("China", 1441));
+      console.log(describePopulation("England", 66));
+    </script>
+  </body>
+</html>

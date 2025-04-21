@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<!-- saved from url=(0282)https://courses.funix.edu.vn/courses/course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6/courseware/1ca87e47db454c349d655c06e7215786/87b4f5da0bd14cc981bb9ee6329a2f9d/?activate_block_id=block-v1%3AFUNiX%2BWEB101x_2.1-A_VN%2B2022_T6%2Btype%40sequential%2Bblock%4087b4f5da0bd14cc981bb9ee6329a2f9d -->
+<html lang="en"><!--<![endif]--><head dir="ltr"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">span.iconify, i.iconify, iconify-icon { display: inline-block; width: 1em; }</style>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  
+<title data-base-title="
+ Assignment 01: Xây dựng trang Digital CV | WEB101x_2.1-A_VN Courseware | FUNiX">
+  
+ Hướng dẫn hoàn thành dự án | Assignment 01: Xây dựng trang Digital CV | WEB101x_2.1-A_VN Courseware | FUNiX
+</title>
+
+
+      <script type="text/javascript">
+        /* immediately break out of an iframe if coming from the marketing website */
+        (function(window) {
+          if (window.location !== window.top.location) {
+            window.top.location = window.location;
+          }
+        })(this);
+      </script>
+
+  
+
+  <script type="text/javascript" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/djangojs.b28203373cc1.js.tải xuống"></script>
+
+  <link rel="icon" type="image/x-icon" href="https://courses.funix.edu.vn/static/public.site/images/favicon.8226308254c3.ico">
+
+  
+  
+
+    <link href="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/lms-style-vendor.4ccaa7f84216.css" rel="stylesheet" type="text/css">
+
+
+
+    
+  
+
+    <link href="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/lms-main-v1.6dd0a4734340.css" rel="stylesheet" type="text/css">
+
+
+
+
+    
+    <script type="text/javascript" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/lms-main_vendor.53cdacba553b.js.tải xuống" charset="utf-8"></script>
+
+
+    
+    <script type="text/javascript" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/lms-application.7a7a3ec8bdd7.js.tải xuống" charset="utf-8"></script>
+
+
+
+
+  <script>
+    window.baseUrl = "/static/";
+    (function (require) {
+      require.config({
+          baseUrl: window.baseUrl
+      });
+    }).call(this, require || RequireJS.require);
+  </script>
+  <script type="text/javascript" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/require-config.7181341023ea.js.tải xuống"></script>
+  
+    <script type="text/javascript">
+        (function (require) {
+          require.config({
+              paths: {
+                'js/courseware/courseware_factory': 'js/courseware/courseware_factory.1504fc10caef',
+'draggabilly': 'js/vendor/draggabilly.26caba6f7187',
+'js/courseware/course_home_events': 'js/courseware/course_home_events.f9fa9db95688',
+'js/dateutil_factory': 'js/dateutil_factory.3eb368403470',
+'course_bookmarks/js/views/bookmark_button': 'course_bookmarks/js/views/bookmark_button.59e957d21d61',
+'js/courseware/accordion_events': 'js/courseware/accordion_events.6064c7809de5',
+'hls': 'common/js/vendor/hls.b10b9ef4015b',
+'js/courseware/toggle_element_visibility': 'js/courseware/toggle_element_visibility.22ad04bb0497',
+'js/courseware/link_clicked_events': 'js/courseware/link_clicked_events',
+'moment': 'common/js/vendor/moment-with-locales.084396f4103c',
+'moment-timezone': 'common/js/vendor/moment-timezone-with-data.fb672d94d97e',
+'js/views/message_banner': 'js/views/message_banner.099aec538f98',
+'js/groups/discussions_management/discussions_dashboard_factory': 'js/discussions_management/views/discussions_dashboard_factory.2e10d9097343',
+'js/student_account/logistration_factory': 'js/student_account/logistration_factory.39b8b2b9e9a9',
+'js/student_profile/views/learner_profile_factory': 'js/student_profile/views/learner_profile_factory.1ff1c6343594',
+'js/groups/views/cohorts_dashboard_factory': 'js/groups/views/cohorts_dashboard_factory.8ad700838f0f'
+            }
+          });
+        }).call(this, require || RequireJS.require);
+    </script>
+  
+
+    
+    <script type="text/javascript" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/lms-modules.b0b524c44599.js.tải xuống" charset="utf-8"></script>
+
+
+
+  
+
+  
+
+    <link href="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/lms-style-course-vendor.60799ae7d9f8.css" rel="stylesheet" type="text/css">
+
+
+
+
+  
+
+    <link href="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/lms-course.e2325b57e44b.css" rel="stylesheet" type="text/css">
+
+
+
+
+<script type="text/javascript" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/jquery.autocomplete.3bd10d7510d2.js.tải xuống"></script>
+<script type="text/javascript" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/tooltip_manager.e3531e99ed92.js.tải xuống"></script>
+
+<link href="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/jquery.autocomplete.09a0b34739a2.css" rel="stylesheet" type="text/css">
+  
+
+  
+
+  
+
+
+
+  
+
+  
+
+
+  
+
+
+<!-- dummy Segment -->
+<script type="text/javascript">
+  var analytics = {
+    track: function() { return; },
+    trackLink: function() { return; },
+    pageview: function() { return; },
+    page: function() { return; }
+  };
+</script>
+<!-- end dummy Segment -->
+
+
+  <meta name="path_prefix" content="">
+  <meta name="google-site-verification" content="_mipQ4AtZQDNmbtOkwehQDOgCxUUV2fb_C0b6wbiRHY">
+
+
+
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="hls" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/hls.b10b9ef4015b.js.tải xuống"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="moment" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/moment-with-locales.084396f4103c.js.tải xuống"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="draggabilly" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/draggabilly.26caba6f7187.js.tải xuống"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="course_bookmarks/js/views/bookmark_button" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/bookmark_button.59e957d21d61.js.tải xuống"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/views/message_banner" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/message_banner.099aec538f98.js.tải xuống"></script></head>
+
+<body class="ltr view-in-course view-courseware courseware  lang_en"><div id="MathJax_Message" style="display: none;"></div>
+
+
+<div id="page-prompt"></div>
+  <div class="window-wrap" dir="ltr">
+    <a class="nav-skip sr-only sr-only-focusable" href="https://courses.funix.edu.vn/courses/course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6/courseware/1ca87e47db454c349d655c06e7215786/87b4f5da0bd14cc981bb9ee6329a2f9d/?activate_block_id=block-v1%3AFUNiX%2BWEB101x_2.1-A_VN%2B2022_T6%2Btype%40sequential%2Bblock%4087b4f5da0bd14cc981bb9ee6329a2f9d#main">Skip to main content</a>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <header id="global-navigation" class="header-global slim">
+    <nav class="wrapper-header" aria-label="Global">
+      
+
+
+
+
+
+<h1 class="hd logo-header">
+  <div class="logo">
+    <a href="https://courses.funix.edu.vn/">
+      
+      <img src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/logo.png" alt="FUNiX Home Page">
+      
+    </a>
+  </div>
+    <div class="course-header">
+      <span class="provider">FUNiX:</span>
+      <span class="course-number">WEB101x_2.1-A_VN</span>
+      
+      <span class="course-name">Xây dựng website đầu tiên</span>
+    </div>
+</h1>
+
+        
+
+
+
+
+
+
+<ol class="left nav-global list-inline authenticated">
+  
+      <li class="item nav-global-01">
+        <a href="https://courses.funix.edu.vn/courses">Explore courses</a>
+      </li>
+  
+</ol>
+
+
+
+
+
+
+
+    <ol class="user">
+        <li class="primary">
+            <a href="https://courses.funix.edu.vn/dashboard" class="user-link">
+                <span class="sr">Dashboard for:</span>
+                
+                <img class="user-image-frame" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/default_50.76570a4d025e.png" alt="">
+                <div class="label-username">quyetpvFX21325</div>
+            </a>
+        </li>
+        <li class="primary">
+            <div class="user-menu">
+                <button class="user-dropdown" aria-expanded="false" aria-haspopup="true">
+                    <span class="sr">More options</span>
+                    <span class="fa fa-sort-desc" aria-hidden="true"></span>
+                </button>
+                <ul class="user-dropdown-menu" aria-label="More Options" role="menu">
+                    
+                    <li class="dropdown-item item has-block-link"><a href="https://courses.funix.edu.vn/dashboard" role="menuitem" class="action dropdown-menuitem">Dashboard</a></li>
+                    <li class="dropdown-item item has-block-link"><a href="https://courses.funix.edu.vn/u/quyetpvFX21325" role="menuitem" class="action dropdown-menuitem">Profile</a></li>
+                    <li class="dropdown-item item has-block-link"><a href="https://courses.funix.edu.vn/account/settings" role="menuitem" class="action dropdown-menuitem">Account</a></li>
+                
+                    <li class="item"><a href="https://courses.funix.edu.vn/logout" role="menuitem" class="user-dropdown-menuitem">Sign Out</a></li>
+                </ul>
+            </div>
+        </li>
+    </ol>
+
+
+<div><a target="_blank" href="https://portal.funix.edu.vn/" class="doc-link">Bảng điểm</a></div>
+
+<div><a target="_blank" href="https://funix.gitbook.io/funix-documentation/" class="doc-link">Sổ tay SV</a></div>
+
+
+    </nav>
+  </header>
+<!--[if lte IE 9]>
+<div class="ie-banner" aria-hidden="true"><strong>Warning:</strong> Your browser is not fully supported. We strongly recommend using <a href="https://www.google.com/chrome" target="_blank">Chrome</a> or <a href="http://www.mozilla.org/firefox" target="_blank">Firefox</a>.</div>
+<![endif]-->
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+    <div class="content-wrapper  main-container" id="content">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/template" id="image-modal-tpl">
+    <div class="wrapper-modal wrapper-modal-image">
+  <section class="image-link">
+    <%= smallHTML%>
+    <a href="#" class="modal-ui-icon action-fullscreen" role="button">
+      <span class="label">
+        <span class="icon fa fa-arrows-alt fa-large" aria-hidden="true"></span> <%- gettext("Fullscreen") %>
+      </span>
+    </a>
+  </section>
+
+  <section class="image-modal">
+    <section class="image-content">
+      <div class="image-wrapper">
+        <img alt="<%= largeALT %>, <%- gettext('Large') %>" src="<%= largeSRC %>" />
+      </div>
+
+      <a href="#" class="modal-ui-icon action-close" role="button">
+        <span class="label">
+          <span class="icon fa fa-remove fa-large" aria-hidden="true"></span> <%- gettext("Close") %>
+        </span>
+      </a>
+
+      <ul class="image-controls">
+        <li class="image-control">
+          <a href="#" class="modal-ui-icon action-zoom-in" role="button">
+            <span class="label">
+              <span class="icon fa fa fa-search-plus fa-large" aria-hidden="true"></span> <%- gettext("Zoom In") %>
+            </span>
+          </a>
+        </li>
+
+        <li class="image-control">
+          <a href="#" class="modal-ui-icon action-zoom-out is-disabled" aria-disabled="true" role="button">
+            <span class="label">
+              <span class="icon fa fa fa-search-minus fa-large" aria-hidden="true"></span> <%- gettext("Zoom Out") %>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </section>
+</div>
+
+</script>
+
+
+
+
+
+
+
+
+<div class="message-banner" aria-live="polite"></div>
+
+  
+
+
+
+
+
+
+
+
+    <nav class="courseware wrapper-course-material" aria-label="Course Material">
+        <div class="course-material">
+            
+            <ol class="tabs course-tabs">
+                
+
+
+
+
+
+  
+  <li class="tab">
+  <a href="https://courses.funix.edu.vn/courses/course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6/info" class="">
+  Home
+  </a>
+  </li>
+  
+  <li class="tab">
+  <a href="https://courses.funix.edu.vn/courses/course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6/course/" class="active">
+  Course
+      <span class="sr">, current location</span>
+  </a>
+  </li>
+  
+  <li class="tab">
+  <a href="https://courses.funix.edu.vn/courses/course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6/3ce3e9029d3a4024adcc67ca081920ef/" class="">
+  Assessment Submission
+  </a>
+  </li>
+  
+  <li class="tab">
+  <a href="https://courses.funix.edu.vn/courses/course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6/progress" class="">
+  Progress
+  </a>
+  </li>
+
+                
+            </ol>
+        </div>
+    </nav>
+
+
+<div class="container" lang="en">
+  <div class="course-wrapper" role="presentation">
+
+    <section class="course-content" id="course-content">
+        <header class="page-header has-secondary">
+            <div class="page-header-main">
+                <nav aria-label="Course" class="sr-is-focusable" tabindex="-1">
+                    <div class="has-breadcrumbs">
+                        <div class="breadcrumbs">
+                                <span class="nav-item nav-item-course">
+                                    <a href="https://courses.funix.edu.vn/courses/course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6/course/">Course</a>
+                                </span>
+                                <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+                                <span class="nav-item nav-item-chapter">
+                                    <a href="https://courses.funix.edu.vn/courses/course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6/course/#block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@chapter+block@1ca87e47db454c349d655c06e7215786">Phần 2. CSS cơ bản</a>
+                                </span>
+                                <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+                                <span class="nav-item nav-item-section">
+                                    <a href="https://courses.funix.edu.vn/courses/course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6/course/#block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@sequential+block@87b4f5da0bd14cc981bb9ee6329a2f9d">Assignment 01: Xây dựng trang Digital CV</a>
+                                </span>
+                                <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+                            <span class="nav-item nav-item-sequence">Hướng dẫn hoàn thành dự án</span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main" tabindex="-1" aria-label="Content">
+
+              <div class="xblock xblock-student_view xblock-student_view-sequential xmodule_display xmodule_SequenceModule xblock-initialized" data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" data-block-type="sequential" data-request-token="6573367228f711eeae7542010a94000b" data-runtime-version="1" data-usage-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@sequential+block@87b4f5da0bd14cc981bb9ee6329a2f9d" data-type="Sequence" data-course-id="course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6">
+  
+  
+
+
+<div id="sequence_87b4f5da0bd14cc981bb9ee6329a2f9d" class="sequence" data-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@sequential+block@87b4f5da0bd14cc981bb9ee6329a2f9d" data-position="2" data-ajax-url="/courses/course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6/xblock/block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@sequential+block@87b4f5da0bd14cc981bb9ee6329a2f9d/handler/xmodule_handler" data-next-url="/courses/course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6/courseware/1ca87e47db454c349d655c06e7215786/fe76a52d548b49ddadc72ae11f3fca3e/?child=first" data-prev-url="/courses/course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6/courseware/1ca87e47db454c349d655c06e7215786/36bd73d41e3d4403b94e8b70732b4d17/?child=last">
+  <div class="sequence-nav">
+    <button class="sequence-nav-button button-previous" aria-hidden="true">
+      <span class="icon fa fa-chevron-prev" aria-hidden="true"></span>
+      <span>Previous</span>
+    </button>
+    <nav class="sequence-list-wrapper" aria-label="Sequence">
+      <ol id="sequence-list" role="tablist">
+        <li>
+        <button class="seq_other inactive nav-item tab" role="tab" tabindex="-1" aria-selected="false" aria-expanded="false" aria-controls="seq_content" data-index="0" data-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@vertical+block@32a929c6fc9f4df6b0713e1f3567bf76" data-element="1" data-page-title="Tổng quan dự án" data-path="Phần 2. CSS cơ bản &gt; Assignment 01: Xây dựng trang Digital CV &gt; Tổng quan dự án" id="tab_0">
+            <span class="icon fa seq_other" aria-hidden="true"></span>
+            <span class="fa fa-fw fa-bookmark bookmark-icon is-hidden" aria-hidden="true"></span>
+            <div class="sequence-tooltip sr"><span class="sr">other&nbsp;</span>Tổng quan dự án<span class="sr bookmark-icon-sr">&nbsp;</span></div>
+          </button>
+        </li>
+        <li>
+        <button class="seq_other nav-item tab active" role="tab" tabindex="0" aria-selected="true" aria-expanded="true" aria-controls="seq_content" data-index="1" data-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@vertical+block@05206d3502a34b4c87408a17e066eed0" data-element="2" data-page-title="Hướng dẫn hoàn thành dự án" data-path="Phần 2. CSS cơ bản &gt; Assignment 01: Xây dựng trang Digital CV &gt; Hướng dẫn hoàn thành dự án" id="tab_1">
+            <span class="icon fa seq_other" aria-hidden="true"></span>
+            <span class="fa fa-fw fa-bookmark bookmark-icon bookmarked" aria-hidden="true"></span>
+            <div class="sequence-tooltip sr"><span class="sr">other&nbsp;</span>Hướng dẫn hoàn thành dự án<span class="sr bookmark-icon-sr">&nbsp;Bookmarked</span></div>
+          </button>
+        </li>
+        <li>
+        <button class="seq_other inactive nav-item tab" role="tab" tabindex="-1" aria-selected="false" aria-expanded="false" aria-controls="seq_content" data-index="2" data-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@vertical+block@30ffe5a761524919934f85fb5e81b7fe" data-element="3" data-page-title="Hướng dẫn nộp bài" data-path="Phần 2. CSS cơ bản &gt; Assignment 01: Xây dựng trang Digital CV &gt; Hướng dẫn nộp bài" id="tab_2">
+            <span class="icon fa seq_other" aria-hidden="true"></span>
+            <span class="fa fa-fw fa-bookmark bookmark-icon is-hidden" aria-hidden="true"></span>
+            <div class="sequence-tooltip sr"><span class="sr">other&nbsp;</span>Hướng dẫn nộp bài<span class="sr bookmark-icon-sr">&nbsp;</span></div>
+          </button>
+        </li>
+        <li>
+        <button class="seq_other inactive nav-item tab" role="tab" tabindex="-1" aria-selected="false" aria-expanded="false" aria-controls="seq_content" data-index="3" data-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@vertical+block@63a5c4ac99574981b439cb561dae0472" data-element="4" data-page-title="Tiêu chí đánh giá" data-path="Phần 2. CSS cơ bản &gt; Assignment 01: Xây dựng trang Digital CV &gt; Tiêu chí đánh giá" id="tab_3">
+            <span class="icon fa seq_other" aria-hidden="true"></span>
+            <span class="fa fa-fw fa-bookmark bookmark-icon is-hidden" aria-hidden="true"></span>
+            <div class="sequence-tooltip sr"><span class="sr">other&nbsp;</span>Tiêu chí đánh giá<span class="sr bookmark-icon-sr">&nbsp;</span></div>
+          </button>
+        </li>
+      </ol>
+    </nav>
+    <button class="sequence-nav-button button-next" aria-hidden="true">
+      <span>Next</span>
+      <span class="icon fa fa-chevron-next" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="sr-is-focusable" tabindex="-1"></div>
+
+  <div id="seq_contents_0" aria-labelledby="tab_0" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view xblock-student_view-vertical" data-runtime-class="LmsRuntime" data-init="VerticalStudentView" data-course-id="course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6" data-request-token="6573367228f711eeae7542010a94000b" data-runtime-version="1" data-usage-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@vertical+block@32a929c6fc9f4df6b0713e1f3567bf76" data-block-type="vertical"&gt;
+  
+
+  &lt;h2 class="hd hd-2 unit-title"&gt;Tổng quan dự án&lt;/h2&gt;
+
+    
+
+
+
+&lt;div class="bookmark-button-wrapper"&gt;
+  &lt;button class="btn btn-link bookmark-button "
+    aria-pressed="false"
+    data-bookmark-id="quyetpvFX21325,block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@vertical+block@32a929c6fc9f4df6b0713e1f3567bf76"
+    data-bookmarks-api-url="/api/bookmarks/v1/bookmarks/"&gt;
+     &lt;span class="bookmark-text"&gt;Bookmark this page&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+
+&lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" data-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@html+block@67757ef602cc4f52b6d56561f0f4a090"&gt;
+    &lt;div class="xblock xblock-student_view xblock-student_view-html xmodule_display xmodule_HtmlModule" data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" data-block-type="html" data-request-token="6573367228f711eeae7542010a94000b" data-runtime-version="1" data-usage-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@html+block@67757ef602cc4f52b6d56561f0f4a090" data-type="HTMLModule" data-course-id="course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;p style="margin: 0px 0px 1.41575em; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; text-rendering: optimizelegibility; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; vertical-align: baseline;"&gt;&lt;span face="arial, helvetica, sans-serif" style="color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 1.4em; font-family: arial, helvetica, sans-serif; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline;"&gt;&lt;b style="line-height: 1.4em; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline;"&gt;M&amp;ocirc;n học: &lt;/b&gt;WEB101x_2.1-A_VN - X&amp;acirc;y dựng Website đầu ti&amp;ecirc;n&lt;/span&gt;&lt;/p&gt;
+&lt;p style="margin-right: 0px; margin-bottom: 1.41575em; margin-left: 0px; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; text-rendering: optimizelegibility; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; vertical-align: baseline;"&gt;&lt;span face="arial, helvetica, sans-serif" style="color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 1.4em; font-family: arial, helvetica, sans-serif; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline;"&gt;&lt;b style="line-height: 1.4em; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline;"&gt;Assignment số:&amp;nbsp;&lt;/b&gt;01&lt;/span&gt;&lt;/p&gt;
+&lt;p style="margin-right: 0px; margin-bottom: 1.41575em; margin-left: 0px; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; text-rendering: optimizelegibility; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; vertical-align: baseline;"&gt;&lt;span face="arial, helvetica, sans-serif" style="color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 1.4em; font-family: arial, helvetica, sans-serif; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline;"&gt;&lt;b style="line-height: 1.4em; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline;"&gt;T&amp;ecirc;n dự &amp;aacute;n:&amp;nbsp; &lt;/b&gt;X&amp;acirc;y dựng trang Digital CV&lt;/span&gt;&lt;/p&gt;
+&lt;p style="margin-right: 0px; margin-bottom: 1.41575em; margin-left: 0px; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; text-rendering: optimizelegibility; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; vertical-align: baseline;"&gt;&lt;span face="arial, helvetica, sans-serif" style="color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 1.4em; font-family: arial, helvetica, sans-serif; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline;"&gt;&lt;b style="line-height: 1.4em; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline;"&gt;Thời gian ước t&amp;iacute;nh ho&amp;agrave;n th&amp;agrave;nh dự &amp;aacute;n: 6h&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="margin-right: 0px; margin-bottom: 1.41575em; margin-left: 0px; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; text-rendering: optimizelegibility; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; vertical-align: baseline;"&gt;&lt;b style="line-height: 1.4em; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline;"&gt;Tổng quan&amp;nbsp;dự &amp;aacute;n&lt;/b&gt;&lt;/p&gt;
+&lt;p style="margin-right: 0px; margin-bottom: 1.41575em; margin-left: 0px; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; text-rendering: optimizelegibility; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; vertical-align: baseline;"&gt;&lt;span style="color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 1.4em; font-family: arial, helvetica, sans-serif; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline;"&gt;Ở b&amp;agrave;i học n&amp;agrave;y, bạn sẽ được &amp;aacute;p dụng c&amp;aacute;c kiến thức đ&amp;atilde; học về HTML cũng như CSS để x&amp;acirc;y dựng một trang Digital CV cho ch&amp;iacute;nh bạn. Giao diện của trang sẽ như sau:&lt;/span&gt;&lt;/p&gt;
+&lt;p style="margin-right: 0px; margin-bottom: 1.41575em; margin-left: 0px; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; text-rendering: optimizelegibility; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; vertical-align: baseline;"&gt;&lt;img src="https://firebasestorage.googleapis.com/v0/b/funix-way.appspot.com/o/xSeries%2FWEB101x_2.1%2FASM_Image%2FWEB101x_ASM01_1.png?alt=media&amp;amp;token=76a81d11-8a24-4ce1-8300-4422be75bef7" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="1085" height="2192" /&gt;&lt;/p&gt;
+&lt;p dir="ltr" style="margin: 0pt 0px 8pt; text-align: justify; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.295; font-size: 16px; text-rendering: optimizelegibility; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; vertical-align: baseline;"&gt;&lt;span style="color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 1.4em; font-family: arial, helvetica, sans-serif;"&gt;Lưu &amp;yacute;: Bạn c&amp;oacute; thể sửa lại nội dung của trang Web để ph&amp;ugrave; hợp với bản th&amp;acirc;n bạn. Tuy nhi&amp;ecirc;n cấu tr&amp;uacute;c trang Web cần giữ nguy&amp;ecirc;n giống như thiết kế.&lt;/span&gt;&lt;/p&gt;
+&lt;p dir="ltr" style="margin: 0pt 0px 8pt; text-align: justify; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.295; font-size: 16px; text-rendering: optimizelegibility; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; vertical-align: baseline;"&gt;&lt;span style="color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 1.4em; font-family: arial, helvetica, sans-serif;"&gt;&lt;b style="line-height: 1.4em; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; vertical-align: baseline; text-align: left;"&gt;T&amp;agrave;i nguy&amp;ecirc;n&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Bạn sẽ cần sử dụng thư mục &lt;strong&gt;Stater Code&lt;/strong&gt; ở&amp;nbsp;&lt;strong&gt;&lt;a href="https://drive.google.com/file/d/18HsTX8oWotTuti1KbzhvhBteK5tDFbVH/view" target="[object Object]"&gt;link sau&lt;/a&gt;&lt;/strong&gt; để bắt đầu l&amp;agrave;m Assignment. Thư mục n&amp;agrave;y sẽ c&amp;oacute; cấu tr&amp;uacute;c như sau:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- HTML generated using hilite.me --&gt;&lt;/p&gt;
+&lt;div style="background: #f8f8f8; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em; font-size: 14px;"&gt;
+&lt;pre style="margin: 0; line-height: 125%;"&gt;Assignment 01 Stater
+├─ css
+│  └─ styles.css
+├─ images
+│  └─ default-avatar.png
+│─ index.html&lt;/pre&gt;
+&lt;pre style="margin: 0; line-height: 125%;"&gt;└─ Assignment Text.pdf&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p dir="ltr" style="margin: 0pt 0px 8pt; text-align: justify; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.295; font-size: 16px; text-rendering: optimizelegibility; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; vertical-align: baseline;"&gt;&lt;/p&gt;
+&lt;p dir="ltr" style="margin: 0pt 0px 8pt; text-align: justify; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.295; font-size: 16px; text-rendering: optimizelegibility; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; vertical-align: baseline;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Bao gồm 4 file ch&amp;iacute;nh:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;index.html&lt;/strong&gt;: File HTML chứa code để tạo cấu tr&amp;uacute;c cho trang Web.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;styles.css&lt;/strong&gt;: File CSS chứa code để tạo kiểu cho trang Web.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;images&lt;/strong&gt;: Folder chứa c&amp;aacute;c h&amp;igrave;nh ảnh sẽ sử dụng trong b&amp;agrave;i Assignment.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;Assignment Text.pdf&lt;/strong&gt;:&amp;nbsp;File PDF bao gồm thiết kế của trang Web v&amp;agrave; c&amp;aacute;c đoạn Text m&amp;agrave; bạn sẽ sử dụng.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p dir="ltr" style="margin: 0pt 0px 8pt; text-align: justify; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.295; font-size: 16px; text-rendering: optimizelegibility; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; vertical-align: baseline;"&gt;&lt;span style="color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 1.4em; font-family: arial, helvetica, sans-serif;"&gt;Bạn c&amp;oacute; thể tham khảo c&amp;aacute;c t&amp;agrave;i liệu sau để hỗ trợ trong việc ho&amp;agrave;n th&amp;agrave;nh b&amp;agrave;i tập:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 1.4em; font-family: arial, helvetica, sans-serif;"&gt;Kiến thức về c&amp;aacute;c thẻ HTML ở &lt;strong&gt;B&amp;agrave;i 3. C&amp;aacute;c thẻ HTML phổ biến&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;C&amp;aacute;c thuộc t&amp;iacute;nh CSS để tạo kiểu cho trang Web ở&amp;nbsp;&lt;strong&gt;Phần 2. CSS cơ bản&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Kiến thức về Box model ở&amp;nbsp;&lt;strong&gt;B&amp;agrave;i 6. CSS - 3.&lt;/strong&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;a href="https://www.w3schools.com/css/css_inline-block.asp" target="[object Object]"&gt;Layout CSS - display: inline-block&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;a href="https://css-tricks.com/snippets/css/unordered-list-as-a-timeline/" target="[object Object]"&gt;Unordered List as a Timeline&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;a href="https://www.w3schools.com/howto/howto_css_timeline.asp" target="[object Object]"&gt;How TO - Timeline&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;a href="https://www.w3schools.com/cssref/pr_text_text-transform.asp" target="[object Object]"&gt;text-transform&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;a href="https://www.w3schools.com/cssref/pr_font_weight.asp" target="[object Object]"&gt;font-weight&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;a href="https://www.w3schools.com/css/css_border.asp" target="[object Object]"&gt;border-bottom&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_1" aria-labelledby="tab_1" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view xblock-student_view-vertical" data-runtime-class="LmsRuntime" data-init="VerticalStudentView" data-course-id="course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6" data-request-token="6573367228f711eeae7542010a94000b" data-runtime-version="1" data-usage-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@vertical+block@05206d3502a34b4c87408a17e066eed0" data-block-type="vertical"&gt;
+  
+
+  &lt;h2 class="hd hd-2 unit-title"&gt;Hướng dẫn hoàn thành dự án&lt;/h2&gt;
+
+    
+
+
+
+&lt;div class="bookmark-button-wrapper"&gt;
+  &lt;button class="btn btn-link bookmark-button bookmarked"
+    aria-pressed="true"
+    data-bookmark-id="quyetpvFX21325,block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@vertical+block@05206d3502a34b4c87408a17e066eed0"
+    data-bookmarks-api-url="/api/bookmarks/v1/bookmarks/"&gt;
+     &lt;span class="bookmark-text"&gt;Bookmarked&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+
+&lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" data-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@html+block@9a475f215ef740138ae540649c696e92"&gt;
+    &lt;div class="xblock xblock-student_view xblock-student_view-html xmodule_display xmodule_HtmlModule" data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" data-block-type="html" data-request-token="6573367228f711eeae7542010a94000b" data-runtime-version="1" data-usage-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@html+block@9a475f215ef740138ae540649c696e92" data-type="HTMLModule" data-course-id="course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong style="line-height: 1.4em; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; vertical-align: baseline;"&gt;Y&amp;ecirc;u cầu dự &amp;aacute;n&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Để ho&amp;agrave;n th&amp;agrave;nh Project, bạn cần l&amp;agrave;m theo c&amp;aacute;c bước sau:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;1. Chỉnh sửa c&amp;aacute;c Header&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Khi mở file &lt;a href="https://drive.google.com/file/d/18HsTX8oWotTuti1KbzhvhBteK5tDFbVH/view" target="[object Object]"&gt;Stater Code&lt;/a&gt;, bạn sẽ thấy giao diện hiện tại đ&amp;atilde; bao gồm Container căn giữa trang c&amp;ugrave;ng với Ti&amp;ecirc;u đề của từng phần trong CV như sau:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://firebasestorage.googleapis.com/v0/b/funix-way.appspot.com/o/xSeries%2FWEB101x_2.1%2FASM_Image%2FWEB101x_ASM01_9.png?alt=media&amp;amp;token=9240c001-012f-4276-9568-853ed94b8e62" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="982" height="412" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Nhiệm vụ của bạn l&amp;agrave; sẽ ph&amp;aacute;t triển tiếp c&amp;aacute;c đoạn code để ho&amp;agrave;n th&amp;agrave;nh dự &amp;aacute;n. Y&amp;ecirc;u cầu đầu ti&amp;ecirc;n l&amp;agrave; tạo kiểu cho phần ti&amp;ecirc;u đề của từng phần. Bạn sẽ thấy mỗi phần được viết trong đoạn HTML như sau:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- HTML generated using hilite.me --&gt;&lt;/p&gt;
+&lt;div style="background: #f8f8f8; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em; font-size: 14px;"&gt;
+&lt;pre style="margin: 0; line-height: 125%;"&gt;&lt;span style="color: #204a87; font-weight: bold;"&gt;&amp;lt;div&lt;/span&gt; &lt;span style="color: #c4a000;"&gt;class=&lt;/span&gt;&lt;span style="color: #4e9a06;"&gt;"section"&lt;/span&gt; &lt;span style="color: #c4a000;"&gt;id=&lt;/span&gt;&lt;span style="color: #4e9a06;"&gt;"target"&lt;/span&gt;&lt;span style="color: #204a87; font-weight: bold;"&gt;&amp;gt;&lt;/span&gt;
+	&lt;span style="color: #204a87; font-weight: bold;"&gt;&amp;lt;h2&lt;/span&gt; &lt;span style="color: #c4a000;"&gt;class=&lt;/span&gt;&lt;span style="color: #4e9a06;"&gt;"section-title"&lt;/span&gt;&lt;span style="color: #204a87; font-weight: bold;"&gt;&amp;gt;&lt;/span&gt;Mục ti&amp;ecirc;u nghề nghiệp&lt;span style="color: #204a87; font-weight: bold;"&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+	&lt;span style="color: #204a87; font-weight: bold;"&gt;&amp;lt;div&lt;/span&gt; &lt;span style="color: #c4a000;"&gt;class=&lt;/span&gt;&lt;span style="color: #4e9a06;"&gt;"section-content"&lt;/span&gt;&lt;span style="color: #204a87; font-weight: bold;"&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span style="color: #204a87; font-weight: bold;"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Bạn sẽ cần tạo kiểu cho phần ti&amp;ecirc;u đề th&amp;agrave;nh như sau:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://firebasestorage.googleapis.com/v0/b/funix-way.appspot.com/o/xSeries%2FWEB101x_2.1%2FASM_Image%2FWEB101x_ASM01_10.png?alt=media&amp;amp;token=6a45963c-44a4-422f-a5e1-b1bb0d01812c" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="752" height="65" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Để l&amp;agrave;m được y&amp;ecirc;u cầu n&amp;agrave;y, bạn sẽ cần th&amp;ecirc;m c&amp;aacute;c thuộc t&amp;iacute;nh CSS cho class&amp;nbsp;section-title như sau:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Sử dụng thuộc t&amp;iacute;nh&amp;nbsp;&lt;a href="https://www.w3schools.com/cssref/pr_text_text-transform.asp" target="[object Object]"&gt;text-transform&lt;/a&gt; để khiến&amp;nbsp;nội dung trong phần ti&amp;ecirc;u đề th&amp;agrave;nh in hoa.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Sử dụng thuộc t&amp;iacute;nh&amp;nbsp;&lt;a href="https://www.w3schools.com/cssref/pr_font_weight.asp" target="[object Object]"&gt;font-weight&lt;/a&gt; để khiến nội dung trong phần ti&amp;ecirc;u đề in đậm.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Sử dụng thuộc t&amp;iacute;nh&amp;nbsp;&lt;a href="https://www.w3schools.com/css/css_border.asp" target="[object Object]"&gt;border-bottom&lt;/a&gt; để tạo đường viền dưới.&amp;nbsp;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;2. X&amp;acirc;y dựng th&amp;ocirc;ng tin c&amp;aacute; nh&amp;acirc;n&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Tiếp theo, bạn sẽ x&amp;acirc;y dựng phần đầu ti&amp;ecirc;n của trang Web, đ&amp;oacute; l&amp;agrave; th&amp;ocirc;ng tin c&amp;aacute; nh&amp;acirc;n.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://firebasestorage.googleapis.com/v0/b/funix-way.appspot.com/o/xSeries%2FWEB101x_2.1%2FASM_Image%2FWEB101x_ASM01_2.png?alt=media&amp;amp;token=18cc22ec-2ac4-4c61-9af4-86e4fd86f135" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="1222" height="657" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Ch&amp;uacute;ng ta c&amp;oacute; thể ph&amp;acirc;n t&amp;iacute;ch cấu tr&amp;uacute;c&amp;nbsp;của phần n&amp;agrave;y như sau:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://firebasestorage.googleapis.com/v0/b/funix-way.appspot.com/o/xSeries%2FWEB101x_2.1%2FASM_Image%2FWEB101x_ASM01_3.png?alt=media&amp;amp;token=09085d63-d9e8-44e0-b33f-d0fc67ec4a7d" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="1222" height="649" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Bạn cần ch&amp;uacute; &amp;yacute; một số ti&amp;ecirc;u ch&amp;iacute;:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Phần t&amp;ecirc;n (Nguyễn Văn A) sẽ cần sử dụng thẻ &lt;strong&gt;&amp;lt;h1&amp;gt;&lt;/strong&gt; v&amp;agrave; m&amp;agrave;u chữ c&amp;oacute; m&amp;atilde; l&amp;agrave; &lt;strong&gt;#0e2452&lt;/strong&gt;.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Phần h&amp;igrave;nh ảnh bạn c&amp;oacute; thể t&amp;igrave;m ở "T&amp;agrave;i nguy&amp;ecirc;n dự &amp;aacute;n". H&amp;igrave;nh ảnh n&amp;agrave;y sẽ c&amp;oacute; k&amp;iacute;ch thước l&amp;agrave; &lt;strong&gt;113px x 113px&lt;/strong&gt;. Để căn chỉnh h&amp;igrave;nh ảnh bạn c&amp;oacute; thể sử dụng kiến thức về CSS Position trong&amp;nbsp;&lt;/span&gt;&lt;strong style="font-family: arial, helvetica, sans-serif;"&gt;B&amp;agrave;i 7: Giới thiệu về CSS - Phần 4 &amp;amp; C&amp;aacute;c kỹ năng quan trọng của một web developer&lt;/strong&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Để c&amp;aacute;c thẻ &lt;strong&gt;&amp;lt;div&amp;gt;&lt;/strong&gt; c&amp;oacute; thể hiển thị b&amp;ecirc;n cạnh nhau, bạn c&amp;oacute; thể sử dụng thuộc t&amp;iacute;nh &lt;strong&gt;display: inline-block&lt;/strong&gt;. Bạn c&amp;oacute; thể t&amp;igrave;m hiểu th&amp;ecirc;m về thuộc t&amp;iacute;nh n&amp;agrave;y ở&amp;nbsp;&lt;strong&gt;B&amp;agrave;i 7: Giới thiệu về CSS - Phần 4 &amp;amp; C&amp;aacute;c kỹ năng quan trọng của một web developer&lt;/strong&gt;.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Ở dưới mỗi phần ti&amp;ecirc;u đề sẽ c&amp;oacute; một đường gạch ngang, bạn c&amp;oacute; thể sử dụng thuộc t&amp;iacute;nh border để ho&amp;agrave;n th&amp;agrave;nh phần n&amp;agrave;y.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;3. X&amp;acirc;y dựng phần l&amp;yacute; lịch&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Phần l&amp;yacute; lịch n&amp;agrave;y sẽ gồm nhiều phần nhỏ như sau:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Học vấn&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Kinh nghiệm l&amp;agrave;m việc&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Hoạt động&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Kỹ năng&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Chứng chỉ - Giải thưởng&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Sở th&amp;iacute;ch&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;C&amp;aacute;c phần n&amp;agrave;y sẽ c&amp;oacute; cấu tr&amp;uacute;c tương tự nhau, v&amp;iacute; dụ như sau:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://firebasestorage.googleapis.com/v0/b/funix-way.appspot.com/o/xSeries%2FWEB101x_2.1%2FASM_Image%2FWEB101x_ASM01_4.png?alt=media&amp;amp;token=97a77507-e42e-4f21-ae87-151b45ef98bb" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="1222" height="800" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Ch&amp;uacute;ng ta c&amp;oacute; thể ph&amp;acirc;n t&amp;iacute;ch cấu tr&amp;uacute;c của phần n&amp;agrave;y như sau:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://firebasestorage.googleapis.com/v0/b/funix-way.appspot.com/o/xSeries%2FWEB101x_2.1%2FASM_Image%2FWEB101x_ASM01_8.png?alt=media&amp;amp;token=41312056-be60-4ba1-999a-fea2db3d3ffa" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="1222" height="306" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;4. X&amp;acirc;y dựng phần dự &amp;aacute;n&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Tiếp theo, bạn sẽ x&amp;acirc;y dựng đến phần th&amp;ocirc;ng tin của c&amp;aacute;c dự &amp;aacute;n như sau:&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://firebasestorage.googleapis.com/v0/b/funix-way.appspot.com/o/xSeries%2FWEB101x_2.1%2FASM_Image%2FWEB101x_ASM01_5.png?alt=media&amp;amp;token=122efce1-b07c-43b1-8b6d-cecc1747aceb" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="1222" height="746" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Ở phần n&amp;agrave;y, bạn sẽ sử dụng thẻ &lt;strong&gt;&amp;lt;ul&amp;gt;,&lt;/strong&gt;&amp;nbsp; &lt;strong&gt;&amp;lt;li&amp;gt;&lt;/strong&gt;&amp;nbsp;để hiển thị ra danh s&amp;aacute;ch từng th&amp;ocirc;ng tin của mỗi dự &amp;aacute;n. C&amp;aacute;c phần c&amp;ograve;n lại như ti&amp;ecirc;u đề, cỡ chữ sẽ giống với c&amp;aacute;c phần ph&amp;iacute;a tr&amp;ecirc;n.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;5. X&amp;acirc;y dựng Footer&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Tiếp theo, bạn sẽ x&amp;acirc;y dựng phần Footer hay ch&amp;acirc;n trang web. Phần n&amp;agrave;y đơn giản l&amp;agrave; sử dụng thẻ &lt;strong&gt;&amp;lt;ol&amp;gt;,&amp;nbsp;&lt;/strong&gt;&lt;strong&gt;&amp;lt;li&amp;gt;&amp;nbsp;&lt;/strong&gt;để tạo danh s&amp;aacute;ch v&amp;agrave; thẻ &lt;strong&gt;&amp;lt;a&amp;gt;&lt;/strong&gt; để tạo li&amp;ecirc;n kết tới c&amp;aacute;c đường dẫn tương ứng.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://firebasestorage.googleapis.com/v0/b/funix-way.appspot.com/o/xSeries%2FWEB101x_2.1%2FASM_Image%2FWEB101x_ASM01_6.png?alt=media&amp;amp;token=2fc925df-cb01-49b6-97f4-920923ed960c" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="1222" height="192" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;6. Căn chỉnh cho trang Web&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Sau khi đ&amp;atilde; ho&amp;agrave;n tất to&amp;agrave;n bộ giao diện của trang Web, bạn cần căn chỉnh lại khoảng c&amp;aacute;ch giữa c&amp;aacute;c phần của trang. Để l&amp;agrave;m được y&amp;ecirc;u cầu n&amp;agrave;y, bạn sẽ cần th&amp;ecirc;m &lt;strong&gt;padding&lt;/strong&gt; hoặc &lt;strong&gt;margin&lt;/strong&gt; cho từng phần sao cho mỗi phần của trang Web c&amp;aacute;ch nhau hợp l&amp;yacute;.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;Gợi &amp;yacute;:&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Bạn c&amp;oacute; thể tham khảo khoảng c&amp;aacute;ch ở phần "Ph&amp;acirc;n t&amp;iacute;ch cấu tr&amp;uacute;c" để thiết kế cho hợp l&amp;yacute;.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Để sử dụng padding hoặc margin, bạn c&amp;oacute; thể xem lại kiến thức ở&amp;nbsp;&lt;strong&gt;B&amp;agrave;i 6:&amp;nbsp;&lt;/strong&gt;&lt;/span&gt;&lt;span face="arial, helvetica, sans-serif" style="font-family: arial, helvetica, sans-serif;"&gt;&lt;b&gt;Giới thiệu về CSS - Phần 3&lt;/b&gt;.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;strong&gt;7. Chỉnh sửa nội dung của CV&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Bạn sẽ cần thay đổi nội dung của c&amp;aacute;c phần trong CV th&amp;agrave;nh c&amp;aacute;c th&amp;ocirc;ng tin của ch&amp;iacute;nh c&amp;aacute; nh&amp;acirc;n bạn. Bạn chỉ c&amp;oacute; thể thay đổi về th&amp;ocirc;ng tin của CV, nhưng cấu tr&amp;uacute;c của CV vẫn cần giữ nguy&amp;ecirc;n so với bản thiết kế đ&amp;atilde; được cung cấp.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span face="Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif" style="font-family: arial, helvetica, sans-serif;"&gt;&lt;b&gt;8. (N&amp;acirc;ng cao) Bổ sung thanh thời gian&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Ở y&amp;ecirc;u cầu n&amp;acirc;ng cao, bạn sẽ chỉnh sửa lại phần &lt;strong&gt;Học vấn&lt;/strong&gt; v&amp;agrave; &lt;strong&gt;Kinh nghiệm l&amp;agrave;m việc&lt;/strong&gt; để bổ sung th&amp;ecirc;m thanh thời gian như h&amp;igrave;nh ảnh dưới đ&amp;acirc;y.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://firebasestorage.googleapis.com/v0/b/funix-way.appspot.com/o/xSeries%2FWEB101x_2.1%2FASM_Image%2FWEB101x_ASM01_7.png?alt=media&amp;amp;token=f3b5958c-aa46-42ef-bad0-fac6f572bc3a" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="965" height="763" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Để ho&amp;agrave;n th&amp;agrave;nh y&amp;ecirc;u cầu n&amp;agrave;y, bạn c&amp;oacute; thể l&amp;agrave;m theo c&amp;aacute;c bước sau:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Sử dụng thẻ &lt;strong&gt;&amp;lt;ul&amp;gt;&lt;/strong&gt; v&amp;agrave;&lt;strong&gt; &amp;lt;li&amp;gt;&lt;/strong&gt; để tạo danh s&amp;aacute;ch ở dạng list v&amp;agrave; c&amp;oacute; bullet point.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Th&amp;ecirc;m thuộc t&amp;iacute;nh &lt;strong&gt;:before&lt;/strong&gt; để tạo đường kết nối giữa c&amp;aacute;c điểm.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;Bạn cũng c&amp;oacute; thể tham khảo c&amp;aacute;c t&amp;agrave;i liệu sau để ho&amp;agrave;n th&amp;agrave;nh y&amp;ecirc;u cầu.&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;a href="https://css-tricks.com/snippets/css/unordered-list-as-a-timeline/" target="[object Object]"&gt;Unordered List as a Timeline&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;a href="https://www.w3schools.com/howto/howto_css_timeline.asp" target="[object Object]"&gt;How TO - Timeline&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span face="arial, helvetica, sans-serif" style="font-family: arial, helvetica, sans-serif;"&gt;9. Kiểm tra lại phần h&amp;igrave;nh ảnh&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span face="arial, helvetica, sans-serif" style="font-family: arial, helvetica, sans-serif;"&gt;Bạn sẽ cần kiểm tra lại xem đường dẫn của c&amp;aacute;c h&amp;igrave;nh ảnh trong b&amp;agrave;i l&amp;agrave;m đ&amp;atilde; đ&amp;uacute;ng chưa, bạn cần ch&amp;uacute; &amp;yacute; l&amp;agrave; sử dụng &lt;a href="https://www.w3schools.com/html/html_filepaths.asp" target="[object Object]"&gt;&lt;strong&gt;đường dẫn tương đối&lt;/strong&gt;&lt;/a&gt; thay cho c&amp;aacute;c đường dẫn tuyệt đối để h&amp;igrave;nh ảnh hiển thị được tr&amp;ecirc;n nhiều m&amp;ocirc;i trường kh&amp;aacute;c nhau.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span face="arial, helvetica, sans-serif" style="font-family: arial, helvetica, sans-serif;"&gt;Nếu như bạn sử dụng Extension Live Server để chạy đoạn code th&amp;igrave; cũng sẽ cần kiểm tra lại xem h&amp;igrave;nh ảnh c&amp;oacute; được hiển thị khi mở file trực tiếp hay kh&amp;ocirc;ng. Điều n&amp;agrave;y gi&amp;uacute;p đảm bảo đoạn code của bạn chạy được ổn định tr&amp;ecirc;n c&amp;aacute;c m&amp;ocirc;i trường kh&amp;aacute;c nhau.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_2" aria-labelledby="tab_2" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view xblock-student_view-vertical" data-runtime-class="LmsRuntime" data-init="VerticalStudentView" data-course-id="course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6" data-request-token="6573367228f711eeae7542010a94000b" data-runtime-version="1" data-usage-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@vertical+block@30ffe5a761524919934f85fb5e81b7fe" data-block-type="vertical"&gt;
+  
+
+  &lt;h2 class="hd hd-2 unit-title"&gt;Hướng dẫn nộp bài&lt;/h2&gt;
+
+    
+
+
+
+&lt;div class="bookmark-button-wrapper"&gt;
+  &lt;button class="btn btn-link bookmark-button "
+    aria-pressed="false"
+    data-bookmark-id="quyetpvFX21325,block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@vertical+block@30ffe5a761524919934f85fb5e81b7fe"
+    data-bookmarks-api-url="/api/bookmarks/v1/bookmarks/"&gt;
+     &lt;span class="bookmark-text"&gt;Bookmark this page&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+
+&lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" data-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@html+block@28f6e7eb998f49918bdb900b2e9b2ef5"&gt;
+    &lt;div class="xblock xblock-student_view xblock-student_view-html xmodule_display xmodule_HtmlModule" data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" data-block-type="html" data-request-token="6573367228f711eeae7542010a94000b" data-runtime-version="1" data-usage-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@html+block@28f6e7eb998f49918bdb900b2e9b2ef5" data-type="HTMLModule" data-course-id="course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;p style="margin: 0px 0px 1.41575em; font-family: 'Open Sans', Verdana, Geneva, sans-serif, sans-serif; font-size: 16px; text-rendering: optimizelegibility; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; vertical-align: baseline;"&gt;&lt;span face="arial, helvetica, sans-serif" style="color: #333333; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 1.4em; font-family: arial, helvetica, sans-serif; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline;"&gt;&lt;b style="line-height: 1.4em; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline;"&gt;Lưu &amp;yacute; về nộp b&amp;agrave;i&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p dir="ltr" style="margin: 0pt 0px 8pt; text-align: justify; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.295; font-size: 16px; text-rendering: optimizelegibility; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; vertical-align: baseline;"&gt;&lt;span style="color: #333333; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: inherit; font-stretch: inherit; font-size: 12pt; line-height: 1.4em; font-family: arial, helvetica, sans-serif; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background-color: transparent; white-space: pre-wrap;"&gt;Sản phẩm cần nộp của bạn sẽ gồm c&amp;aacute;c t&amp;agrave;i nguy&amp;ecirc;n sau:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style="color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 1.4em; font-family: arial, helvetica, sans-serif; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline;"&gt;Source Code Website đ&amp;atilde; ho&amp;agrave;n th&amp;agrave;nh c&amp;aacute;c y&amp;ecirc;u cầu.&amp;nbsp;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p style="margin: 0px 0px 1.41575em; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; text-rendering: optimizelegibility; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; vertical-align: baseline;"&gt;&lt;span style="color: #333333; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 1.4em; font-family: arial, helvetica, sans-serif; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline;"&gt;&lt;strong style="line-height: 1.4em; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline;"&gt;Hướng dẫn nộp b&amp;agrave;i&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="margin-right: 0px; margin-bottom: 1.41575em; margin-left: 0px; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; text-rendering: optimizelegibility; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; vertical-align: baseline;"&gt;&lt;span style="color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 1.4em; font-family: arial, helvetica, sans-serif; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline;"&gt;&lt;span style="color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 1.4em; font-family: inherit; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline;"&gt;Xem hướng dẫn v&amp;agrave; nộp b&amp;agrave;i tại mục&amp;nbsp;&lt;/span&gt;&lt;strong style="line-height: 1.4em; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline;"&gt;Assessment Submission.&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_3" aria-labelledby="tab_3" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class="xblock xblock-student_view xblock-student_view-vertical" data-runtime-class="LmsRuntime" data-init="VerticalStudentView" data-course-id="course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6" data-request-token="6573367228f711eeae7542010a94000b" data-runtime-version="1" data-usage-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@vertical+block@63a5c4ac99574981b439cb561dae0472" data-block-type="vertical"&gt;
+  
+
+  &lt;h2 class="hd hd-2 unit-title"&gt;Tiêu chí đánh giá&lt;/h2&gt;
+
+    
+
+
+
+&lt;div class="bookmark-button-wrapper"&gt;
+  &lt;button class="btn btn-link bookmark-button "
+    aria-pressed="false"
+    data-bookmark-id="quyetpvFX21325,block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@vertical+block@63a5c4ac99574981b439cb561dae0472"
+    data-bookmarks-api-url="/api/bookmarks/v1/bookmarks/"&gt;
+     &lt;span class="bookmark-text"&gt;Bookmark this page&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+
+&lt;div class="vert-mod"&gt;
+  &lt;div class="vert vert-0" data-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@html+block@99adef09db7d4ff6824062af10e612d6"&gt;
+    &lt;div class="xblock xblock-student_view xblock-student_view-html xmodule_display xmodule_HtmlModule" data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" data-block-type="html" data-request-token="6573367228f711eeae7542010a94000b" data-runtime-version="1" data-usage-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@html+block@99adef09db7d4ff6824062af10e612d6" data-type="HTMLModule" data-course-id="course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;p style="color: #3c3c3c; margin: 20px 0px 1.41575em; text-align: left; font-family: 'Open Sans', Verdana, Geneva, sans-serif, sans-serif; line-height: 1.6em !important; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"&gt;&lt;span style="color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 1.4em; font-family: arial, helvetica, sans-serif; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline;"&gt;&lt;strong style="font-weight: bold; line-height: 1.4em; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline;"&gt;Y&amp;ecirc;u cầu chức năng&lt;/strong&gt;&lt;/span&gt;&lt;span style="color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 1.4em; font-family: arial, helvetica, sans-serif;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="color: #3c3c3c; margin: 20px 0px 1.41575em; text-align: left; font-family: 'Open Sans', Verdana, Geneva, sans-serif, sans-serif; line-height: 1.6em !important; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"&gt;&lt;/p&gt;
+&lt;table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" cellpadding="0" dir="ltr" border="1" style="table-layout: fixed; font-size: 10pt; font-family: Arial; width: 0px; border-collapse: collapse; border: none;"&gt;&lt;colgroup&gt;&lt;col width="76" /&gt;&lt;col width="211" /&gt;&lt;col width="115" /&gt;&lt;col width="307" /&gt;&lt;col width="123" /&gt;&lt;col width="102" /&gt;&lt;col width="100" /&gt;&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 21px;"&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;#&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;#&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Criterion\n(Ti&amp;ecirc;u ch&amp;iacute;)&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Criterion&lt;br /&gt;(Ti&amp;ecirc;u ch&amp;iacute;)&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Map to LO&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Map to LO&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Specification\n(Đặc tả)&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Specification&lt;br /&gt;(Đặc tả)&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Trọng số\n(Weight)&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Trọng số&lt;br /&gt;(Weight)&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Mandatory&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Mandatory&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Grading type&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Grading type&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 21px;"&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:3,&amp;quot;3&amp;quot;:1}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;1&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Chỉnh sửa c&amp;aacute;c Header&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt;"&gt;Chỉnh sửa c&amp;aacute;c Header&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;WEB101_o3, WEB101_o4, WEB101_o5, WEB101_o10&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;WEB101x_o3 WEB101x_o4 WEB101x_o5 WEB101x_o10&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;- Tạo kiểu cho phần ti&amp;ecirc;u đề cho từng phần theo như thiết kế đ&amp;atilde; cung cấp.&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;Tạo kiểu cho phần ti&amp;ecirc;u đề cho từng phần theo như thiết kế đ&amp;atilde; cung cấp.&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:3,&amp;quot;3&amp;quot;:1}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;1&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Yes&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Yes&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Scale(0 - 5)&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Scale(0-5)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 21px;"&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:3,&amp;quot;3&amp;quot;:2}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;2&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;X&amp;acirc;y dựng phần th&amp;ocirc;ng tin c&amp;aacute; nh&amp;acirc;n&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;X&amp;acirc;y dựng phần th&amp;ocirc;ng tin c&amp;aacute; nh&amp;acirc;n&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;WEB101_o3, WEB101_o4, WEB101_o5, WEB101_o10&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;WEB101x_o3 WEB101x_o4 WEB101x_o5 WEB101x_o10&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;- X&amp;acirc;y dựng được phần th&amp;ocirc;ng tin c&amp;aacute; nh&amp;acirc;n v&amp;agrave; mục ti&amp;ecirc;u nghề nghiệp giống như thiết kế.&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;X&amp;acirc;y dựng được phần th&amp;ocirc;ng tin c&amp;aacute; nh&amp;acirc;n v&amp;agrave; mục ti&amp;ecirc;u nghề nghiệp giống như thiết kế.&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:3,&amp;quot;3&amp;quot;:1}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;1&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Yes&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Yes&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Scale(0 - 5)&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Scale(0-5)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 21px;"&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:3,&amp;quot;3&amp;quot;:3}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;3&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;X&amp;acirc;y dựng phần l&amp;yacute; lịch&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;X&amp;acirc;y dựng phần l&amp;yacute; lịch&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;WEB101_o3, WEB101_o4, WEB101_o5, WEB101_o10&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;WEB101x_o3, WEB101x_o4, WEB101x_o5, WEB101x_o10&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;- X&amp;acirc;y dựng phần l&amp;yacute; lịch đ&amp;uacute;ng theo như thiết kế, bao gồm:\n   + Học vấn.\n   + Kinh nghiệm l&amp;agrave;m việc.\n   + Hoạt động.\n   + Kỹ năng.\n   + Chứng chỉ - Giải thưởng.\n   + Sở th&amp;iacute;ch.&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;X&amp;acirc;y dựng phần l&amp;yacute; lịch đ&amp;uacute;ng theo như thiết kế, bao gồm:&lt;br /&gt;- Học vấn&lt;br /&gt;- Kinh nghiệm l&amp;agrave;m việc&lt;br /&gt;- Hoạt động&lt;br /&gt;- Kỹ năng&lt;br /&gt;- Chứng chỉ - Giải thưởng&lt;br /&gt;- Sở th&amp;iacute;ch&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:3,&amp;quot;3&amp;quot;:2}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;2&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Yes&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Yes&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Scale(0 - 5)&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Scale(0-5)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 21px;"&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:3,&amp;quot;3&amp;quot;:4}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;4&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;X&amp;acirc;y dựng phần dự &amp;aacute;n&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;X&amp;acirc;y dựng phần dự &amp;aacute;n&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;WEB101_o3, WEB101_o4, WEB101_o5, WEB101_o10&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;WEB101_o3 WEB101_o4 WEB101_o5 WEB101_o10&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;- X&amp;acirc;y dựng được phần dự &amp;aacute;n giống như thiết kế.&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;X&amp;acirc;y dựng được phần dự &amp;aacute;n giống như thiết kế.&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:3,&amp;quot;3&amp;quot;:1}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;1&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Yes&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Yes&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Scale(0 - 5)&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Scale(0-5)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 21px;"&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:3,&amp;quot;3&amp;quot;:5}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;5&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;X&amp;acirc;y dựng Footer&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;X&amp;acirc;y dựng Footer&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;WEB101_o3, WEB101_o4, WEB101_o5, WEB101_o10&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;WEB101_o3 WEB101_o4 WEB101_o5 WEB101_o10&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;- X&amp;acirc;y dựng được phần Footer giống như thiết kế.&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;X&amp;acirc;y dựng được phần Footer giống như thiết kế.&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:3,&amp;quot;3&amp;quot;:0.5}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;0.5&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Yes&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Yes&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Scale(0 - 5)&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Scale(0-5)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 21px;"&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:3,&amp;quot;3&amp;quot;:6}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;6&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Căn chỉnh cho trang Web&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;Căn chỉnh cho trang Web&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;WEB101_o12&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;WEB101_o12&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;- Sử dụng padding v&amp;agrave; margin để căn chỉnh cho trang Web.&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;Sử dụng padding v&amp;agrave; margin để căn chỉnh cho trang Web.&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:3,&amp;quot;3&amp;quot;:1}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;1&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Yes&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Yes&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Scale(0 - 5)&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Scale(0-5)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 21px;"&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:3,&amp;quot;3&amp;quot;:7}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;7&lt;/td&gt;
+&lt;td style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: bottom; font-size: 11pt;"&gt;&lt;span style="font-size: 14.6667px;"&gt;Chỉnh sửa nội dung của CV&lt;/span&gt;&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;WEB101_o2&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt;"&gt;WEB101_o2&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;- Chỉnh sửa nội dung trang Web theo c&amp;aacute;c th&amp;ocirc;ng tin c&amp;aacute; nh&amp;acirc;n của người l&amp;agrave;m.&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: bottom; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;Chỉnh sửa nội dung trang Web theo c&amp;aacute;c th&amp;ocirc;ng tin c&amp;aacute; nh&amp;acirc;n của người l&amp;agrave;m.&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:3,&amp;quot;3&amp;quot;:0.5}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;0.5&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Yes&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Yes&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Scale(0 - 5)&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Scale(0-5)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p style="color: #3c3c3c; margin: 0px 0px 1.41575em; text-align: left; font-family: 'Open Sans', Verdana, Geneva, sans-serif, sans-serif; line-height: 1.6em !important; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0px 0px 1.41575em; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; text-rendering: optimizelegibility; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; vertical-align: baseline;"&gt;&lt;span style="color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 1.4em; font-family: arial, helvetica, sans-serif; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline;"&gt;&lt;strong style="line-height: 1.4em; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline;"&gt;Y&amp;ecirc;u cầu phi chức năng&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" cellpadding="0" dir="ltr" border="1" style="table-layout: fixed; font-size: 10pt; font-family: Arial; width: 0px; border-collapse: collapse; border: none;"&gt;&lt;colgroup&gt;&lt;col width="76" /&gt;&lt;col width="211" /&gt;&lt;col width="115" /&gt;&lt;col width="307" /&gt;&lt;col width="123" /&gt;&lt;col width="102" /&gt;&lt;col width="100" /&gt;&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 21px;"&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;#&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;#&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Criterion\n(Ti&amp;ecirc;u ch&amp;iacute;)&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Criterion&lt;br /&gt;(Ti&amp;ecirc;u ch&amp;iacute;)&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Map to LO&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Map to LO&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Specification\n(Đặc tả)&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Specification&lt;br /&gt;(Đặc tả)&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Trọng số\n(Weight)&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Trọng số&lt;br /&gt;(Weight)&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Mandatory&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Mandatory&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Grading type&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Grading type&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 21px;"&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:3,&amp;quot;3&amp;quot;:1}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;1&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Clean Code v&amp;agrave; Comment&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;Clean Code v&amp;agrave; Comment&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;WEB101_o2&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;WEB101x_o2&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;- C&amp;aacute;c đoạn code được viết r&amp;otilde; r&amp;agrave;ng v&amp;agrave; c&amp;oacute; comment để giải th&amp;iacute;ch một số đoạn code.&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: bottom; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;C&amp;aacute;c đoạn code được viết r&amp;otilde; r&amp;agrave;ng v&amp;agrave; c&amp;oacute; comment để giải th&amp;iacute;ch một số đoạn code.&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:3,&amp;quot;3&amp;quot;:0.5}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;0.5&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;No&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;No&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Scale(0 - 5)&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Scale(0 - 5)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p style="margin: 0px 0px 1.41575em; font-family: 'Open Sans', Verdana, Geneva, sans-serif, sans-serif; font-size: 16px;"&gt;&lt;span style="color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 1.4em; font-family: arial, helvetica, sans-serif; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline;"&gt;&lt;strong style="line-height: 1.4em; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline;"&gt;&lt;strong style="line-height: 1.4em; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline;"&gt;&lt;strong style="line-height: 1.4em; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline; color: #333333;"&gt;Y&amp;ecirc;u cầu n&amp;acirc;ng cao&lt;/strong&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" cellpadding="0" dir="ltr" border="1" style="table-layout: fixed; font-size: 10pt; font-family: Arial; width: 1035px; border-collapse: collapse; border: none;" height="191"&gt;&lt;colgroup&gt;&lt;col width="76" /&gt;&lt;col width="211" /&gt;&lt;col width="115" /&gt;&lt;col width="307" /&gt;&lt;col width="123" /&gt;&lt;col width="102" /&gt;&lt;col width="100" /&gt;&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 21px;"&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;#&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;#&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Criterion\n(Ti&amp;ecirc;u ch&amp;iacute;)&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Criterion&lt;br /&gt;(Ti&amp;ecirc;u ch&amp;iacute;)&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Map to LO&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Map to LO&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Specification\n(Đặc tả)&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Specification&lt;br /&gt;(Đặc tả)&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Trọng số\n(Weight)&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Trọng số&lt;br /&gt;(Weight)&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Mandatory&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Mandatory&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Grading type&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; font-weight: bold; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Grading type&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 21px;"&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:3,&amp;quot;3&amp;quot;:1}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;1&lt;/td&gt;
+&lt;td&gt;Bổ sung thanh thời gian&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;WEB101_o3, WEB101_o4, WEB101_o5, WEB101_o10, WEB101_o12&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: top; font-size: 11pt; white-space: normal; overflow-wrap: break-word;"&gt;WEB101x_o3 WEB101x_o4 WEB101x_o5 WEB101x_o10 WEB101x_o12&lt;/td&gt;
+&lt;td&gt;Bổ sung thanh thời gian cho c&amp;aacute;c phần "Học vấn" v&amp;agrave; "Kinh nghiệm l&amp;agrave;m việc" như thiết kế.&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:3,&amp;quot;3&amp;quot;:1}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;1&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Yes&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;No&lt;/td&gt;
+&lt;td data-sheets-value="{&amp;quot;1&amp;quot;:2,&amp;quot;2&amp;quot;:&amp;quot;Scale(0 - 5)&amp;quot;}" style="border: 1px solid #cccccc; overflow: hidden; padding: 2px 3px; vertical-align: middle; font-size: 11pt; white-space: normal; overflow-wrap: break-word; text-align: center;"&gt;Scale(0 - 5)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_content" role="tabpanel" aria-labelledby="tab_1">
+    <div class="xblock xblock-student_view xblock-student_view-vertical xblock-initialized" data-runtime-class="LmsRuntime" data-init="VerticalStudentView" data-course-id="course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6" data-request-token="6573367228f711eeae7542010a94000b" data-runtime-version="1" data-usage-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@vertical+block@05206d3502a34b4c87408a17e066eed0" data-block-type="vertical">
+  
+
+  <h2 class="hd hd-2 unit-title">Hướng dẫn hoàn thành dự án</h2>
+
+    
+
+
+
+<div class="bookmark-button-wrapper">
+  <button class="btn btn-link bookmark-button bookmarked" aria-pressed="true" data-bookmark-id="quyetpvFX21325,block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@vertical+block@05206d3502a34b4c87408a17e066eed0" data-bookmarks-api-url="/api/bookmarks/v1/bookmarks/">
+     <span class="bookmark-text">Bookmarked</span>
+    </button>
+</div>
+
+
+<div class="vert-mod">
+  <div class="vert vert-0" data-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@html+block@9a475f215ef740138ae540649c696e92">
+    <div class="xblock xblock-student_view xblock-student_view-html xmodule_display xmodule_HtmlModule xblock-initialized" data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" data-block-type="html" data-request-token="6573367228f711eeae7542010a94000b" data-runtime-version="1" data-usage-id="block-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6+type@html+block@9a475f215ef740138ae540649c696e92" data-type="HTMLModule" data-course-id="course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6">
+  
+  <p><span style="font-family: arial, helvetica, sans-serif;"><strong style="line-height: 1.4em; text-rendering: optimizelegibility; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-family: &#39;Open Sans&#39;, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; vertical-align: baseline;">Yêu cầu dự án</strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Để hoàn thành Project, bạn cần làm theo các bước sau:</span></p>
+<p><strong><span style="font-family: arial, helvetica, sans-serif;">1. Chỉnh sửa các Header</span></strong></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Khi mở file <a href="https://drive.google.com/file/d/18HsTX8oWotTuti1KbzhvhBteK5tDFbVH/view" target="[object Object]">Stater Code</a>, bạn sẽ thấy giao diện hiện tại đã bao gồm Container căn giữa trang cùng với Tiêu đề của từng phần trong CV như sau:</span></p>
+<p><img src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/WEB101x_ASM01_9.png" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="982" height="412"></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Nhiệm vụ của bạn là sẽ phát triển tiếp các đoạn code để hoàn thành dự án. Yêu cầu đầu tiên là tạo kiểu cho phần tiêu đề của từng phần. Bạn sẽ thấy mỗi phần được viết trong đoạn HTML như sau:</span></p>
+<p><!-- HTML generated using hilite.me --></p>
+<div style="background: #f8f8f8; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em; font-size: 14px;">
+<pre style="margin: 0; line-height: 125%;"><span style="color: #204a87; font-weight: bold;">&lt;div</span> <span style="color: #c4a000;">class=</span><span style="color: #4e9a06;">"section"</span> <span style="color: #c4a000;">id=</span><span style="color: #4e9a06;">"target"</span><span style="color: #204a87; font-weight: bold;">&gt;</span>
+	<span style="color: #204a87; font-weight: bold;">&lt;h2</span> <span style="color: #c4a000;">class=</span><span style="color: #4e9a06;">"section-title"</span><span style="color: #204a87; font-weight: bold;">&gt;</span>Mục tiêu nghề nghiệp<span style="color: #204a87; font-weight: bold;">&lt;/h2&gt;</span>
+	<span style="color: #204a87; font-weight: bold;">&lt;div</span> <span style="color: #c4a000;">class=</span><span style="color: #4e9a06;">"section-content"</span><span style="color: #204a87; font-weight: bold;">&gt;&lt;/div&gt;</span>
+<span style="color: #204a87; font-weight: bold;">&lt;/div&gt;</span></pre>
+</div>
+<p><span style="font-family: arial, helvetica, sans-serif;">Bạn sẽ cần tạo kiểu cho phần tiêu đề thành như sau:</span></p>
+<p><img src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/WEB101x_ASM01_10.png" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="752" height="65"></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Để làm được yêu cầu này, bạn sẽ cần thêm các thuộc tính CSS cho class&nbsp;section-title như sau:</span></p>
+<ul>
+<li><span style="font-family: arial, helvetica, sans-serif;">Sử dụng thuộc tính&nbsp;<a href="https://www.w3schools.com/cssref/pr_text_text-transform.asp" target="[object Object]">text-transform</a> để khiến&nbsp;nội dung trong phần tiêu đề thành in hoa.</span></li>
+<li><span style="font-family: arial, helvetica, sans-serif;">Sử dụng thuộc tính&nbsp;<a href="https://www.w3schools.com/cssref/pr_font_weight.asp" target="[object Object]">font-weight</a> để khiến nội dung trong phần tiêu đề in đậm.</span></li>
+<li><span style="font-family: arial, helvetica, sans-serif;">Sử dụng thuộc tính&nbsp;<a href="https://www.w3schools.com/css/css_border.asp" target="[object Object]">border-bottom</a> để tạo đường viền dưới.&nbsp;</span></li>
+</ul>
+<p><strong><span style="font-family: arial, helvetica, sans-serif;">2. Xây dựng thông tin cá nhân</span></strong></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Tiếp theo, bạn sẽ xây dựng phần đầu tiên của trang Web, đó là thông tin cá nhân.</span></p>
+<p><img src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/WEB101x_ASM01_2.png" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="1222" height="657"></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Chúng ta có thể phân tích cấu trúc&nbsp;của phần này như sau:</span></p>
+<p><img src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/WEB101x_ASM01_3.png" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="1222" height="649"></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Bạn cần chú ý một số tiêu chí:</span></p>
+<ul>
+<li><span style="font-family: arial, helvetica, sans-serif;">Phần tên (Nguyễn Văn A) sẽ cần sử dụng thẻ <strong>&lt;h1&gt;</strong> và màu chữ có mã là <strong>#0e2452</strong>.</span></li>
+<li><span style="font-family: arial, helvetica, sans-serif;">Phần hình ảnh bạn có thể tìm ở "Tài nguyên dự án". Hình ảnh này sẽ có kích thước là <strong>113px x 113px</strong>. Để căn chỉnh hình ảnh bạn có thể sử dụng kiến thức về CSS Position trong&nbsp;</span><strong style="font-family: arial, helvetica, sans-serif;">Bài 7: Giới thiệu về CSS - Phần 4 &amp; Các kỹ năng quan trọng của một web developer</strong><span style="font-family: arial, helvetica, sans-serif;">.</span></li>
+<li><span style="font-family: arial, helvetica, sans-serif;">Để các thẻ <strong>&lt;div&gt;</strong> có thể hiển thị bên cạnh nhau, bạn có thể sử dụng thuộc tính <strong>display: inline-block</strong>. Bạn có thể tìm hiểu thêm về thuộc tính này ở&nbsp;<strong>Bài 7: Giới thiệu về CSS - Phần 4 &amp; Các kỹ năng quan trọng của một web developer</strong>.</span></li>
+<li><span style="font-family: arial, helvetica, sans-serif;">Ở dưới mỗi phần tiêu đề sẽ có một đường gạch ngang, bạn có thể sử dụng thuộc tính border để hoàn thành phần này.</span></li>
+</ul>
+<p><span style="font-family: arial, helvetica, sans-serif;"><strong>3. Xây dựng phần lý lịch</strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Phần lý lịch này sẽ gồm nhiều phần nhỏ như sau:</span></p>
+<ul>
+<li><span style="font-family: arial, helvetica, sans-serif;">Học vấn</span></li>
+<li><span style="font-family: arial, helvetica, sans-serif;">Kinh nghiệm làm việc</span></li>
+<li><span style="font-family: arial, helvetica, sans-serif;">Hoạt động</span></li>
+<li><span style="font-family: arial, helvetica, sans-serif;">Kỹ năng</span></li>
+<li><span style="font-family: arial, helvetica, sans-serif;">Chứng chỉ - Giải thưởng</span></li>
+<li><span style="font-family: arial, helvetica, sans-serif;">Sở thích</span></li>
+</ul>
+<p><span style="font-family: arial, helvetica, sans-serif;">Các phần này sẽ có cấu trúc tương tự nhau, ví dụ như sau:</span></p>
+<p><img src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/WEB101x_ASM01_4.png" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="1222" height="800"></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Chúng ta có thể phân tích cấu trúc của phần này như sau:</span></p>
+<p><img src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/WEB101x_ASM01_8.png" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="1222" height="306"></p>
+<p><strong><span style="font-family: arial, helvetica, sans-serif;">4. Xây dựng phần dự án</span></strong></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Tiếp theo, bạn sẽ xây dựng đến phần thông tin của các dự án như sau:&nbsp;</span></p>
+<p><img src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/WEB101x_ASM01_5.png" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="1222" height="746"></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Ở phần này, bạn sẽ sử dụng thẻ <strong>&lt;ul&gt;,</strong>&nbsp; <strong>&lt;li&gt;</strong>&nbsp;để hiển thị ra danh sách từng thông tin của mỗi dự án. Các phần còn lại như tiêu đề, cỡ chữ sẽ giống với các phần phía trên.&nbsp;</span></p>
+<p><strong><span style="font-family: arial, helvetica, sans-serif;">5. Xây dựng Footer</span></strong></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Tiếp theo, bạn sẽ xây dựng phần Footer hay chân trang web. Phần này đơn giản là sử dụng thẻ <strong>&lt;ol&gt;,&nbsp;</strong><strong>&lt;li&gt;&nbsp;</strong>để tạo danh sách và thẻ <strong>&lt;a&gt;</strong> để tạo liên kết tới các đường dẫn tương ứng.</span></p>
+<p><img src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/WEB101x_ASM01_6.png" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="1222" height="192"></p>
+<p><strong><span style="font-family: arial, helvetica, sans-serif;">6. Căn chỉnh cho trang Web</span></strong></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Sau khi đã hoàn tất toàn bộ giao diện của trang Web, bạn cần căn chỉnh lại khoảng cách giữa các phần của trang. Để làm được yêu cầu này, bạn sẽ cần thêm <strong>padding</strong> hoặc <strong>margin</strong> cho từng phần sao cho mỗi phần của trang Web cách nhau hợp lý.&nbsp;</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;"><strong>Gợi ý:</strong></span></p>
+<ul>
+<li><span style="font-family: arial, helvetica, sans-serif;">Bạn có thể tham khảo khoảng cách ở phần "Phân tích cấu trúc" để thiết kế cho hợp lý.</span></li>
+<li><span style="font-family: arial, helvetica, sans-serif;">Để sử dụng padding hoặc margin, bạn có thể xem lại kiến thức ở&nbsp;<strong>Bài 6:&nbsp;</strong></span><span face="arial, helvetica, sans-serif" style="font-family: arial, helvetica, sans-serif;"><b>Giới thiệu về CSS - Phần 3</b>.</span></li>
+</ul>
+<p><span style="font-family: arial, helvetica, sans-serif;"><strong>7. Chỉnh sửa nội dung của CV</strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Bạn sẽ cần thay đổi nội dung của các phần trong CV thành các thông tin của chính cá nhân bạn. Bạn chỉ có thể thay đổi về thông tin của CV, nhưng cấu trúc của CV vẫn cần giữ nguyên so với bản thiết kế đã được cung cấp.</span></p>
+<p><span face="Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif" style="font-family: arial, helvetica, sans-serif;"><b>8. (Nâng cao) Bổ sung thanh thời gian</b></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Ở yêu cầu nâng cao, bạn sẽ chỉnh sửa lại phần <strong>Học vấn</strong> và <strong>Kinh nghiệm làm việc</strong> để bổ sung thêm thanh thời gian như hình ảnh dưới đây.</span></p>
+<p><img src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/WEB101x_ASM01_7.png" alt="" type="saveimage" target="[object Object]" preventdefault="function(){r.isDefaultPrevented=n}" stoppropagation="function(){r.isPropagationStopped=n}" stopimmediatepropagation="function(){r.isImmediatePropagationStopped=n}" isdefaultprevented="function t(){return!1}" ispropagationstopped="function t(){return!1}" isimmediatepropagationstopped="function t(){return!1}" width="965" height="763"></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">Để hoàn thành yêu cầu này, bạn có thể làm theo các bước sau:</span></p>
+<ul>
+<li><span style="font-family: arial, helvetica, sans-serif;">Sử dụng thẻ <strong>&lt;ul&gt;</strong> và<strong> &lt;li&gt;</strong> để tạo danh sách ở dạng list và có bullet point.</span></li>
+<li><span style="font-family: arial, helvetica, sans-serif;">Thêm thuộc tính <strong>:before</strong> để tạo đường kết nối giữa các điểm.</span></li>
+</ul>
+<p><span style="font-family: arial, helvetica, sans-serif;">Bạn cũng có thể tham khảo các tài liệu sau để hoàn thành yêu cầu.</span></p>
+<ul>
+<li><span style="font-family: arial, helvetica, sans-serif;"><a href="https://css-tricks.com/snippets/css/unordered-list-as-a-timeline/" target="[object Object]">Unordered List as a Timeline</a></span></li>
+<li><span style="font-family: arial, helvetica, sans-serif;"><a href="https://www.w3schools.com/howto/howto_css_timeline.asp" target="[object Object]">How TO - Timeline</a></span></li>
+</ul>
+<p><strong><span face="arial, helvetica, sans-serif" style="font-family: arial, helvetica, sans-serif;">9. Kiểm tra lại phần hình ảnh</span></strong></p>
+<p><span face="arial, helvetica, sans-serif" style="font-family: arial, helvetica, sans-serif;">Bạn sẽ cần kiểm tra lại xem đường dẫn của các hình ảnh trong bài làm đã đúng chưa, bạn cần chú ý là sử dụng <a href="https://www.w3schools.com/html/html_filepaths.asp" target="[object Object]"><strong>đường dẫn tương đối</strong></a> thay cho các đường dẫn tuyệt đối để hình ảnh hiển thị được trên nhiều môi trường khác nhau.</span></p>
+<p><span face="arial, helvetica, sans-serif" style="font-family: arial, helvetica, sans-serif;">Nếu như bạn sử dụng Extension Live Server để chạy đoạn code thì cũng sẽ cần kiểm tra lại xem hình ảnh có được hiển thị khi mở file trực tiếp hay không. Điều này giúp đảm bảo đoạn code của bạn chạy được ổn định trên các môi trường khác nhau.</span></p>
+</div>
+
+  </div>
+</div>
+
+</div>
+
+  </div>
+
+  <nav class="sequence-bottom" aria-label="Section">
+    <button class="sequence-nav-button button-previous">
+      <span class="icon fa fa-chevron-prev" aria-hidden="true"></span>
+      <span>Previous</span>
+    </button>
+    <button class="sequence-nav-button button-next">
+      <span>Next</span>
+      <span class="icon fa fa-chevron-next" aria-hidden="true"></span>
+    </button>
+  </nav>
+</div>
+
+</div>
+
+        </main>
+    </section>
+
+    <section class="courseware-results-wrapper">
+      <div id="loading-message" aria-live="polite" aria-relevant="all"></div>
+      <div id="error-message" aria-live="polite"></div>
+      <div class="courseware-results search-results" data-course-id="course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6" data-lang-code="en"></div>
+    </section>
+
+  </div>
+  
+
+
+
+
+
+
+
+
+
+    
+    
+                
+                <script type="text/javascript" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/commons.eb69888fa54a.js.tải xuống"></script>
+                <script type="text/javascript" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/CourseSock.48fd341020cbd0e3a65f.5ec83268468d.js.tải xuống"></script>
+                <script type="text/javascript">
+                    
+    new CourseSock({
+        el:'.verification-sock'
+    });
+
+                </script>
+            
+
+</div>
+<div class="container-footer">
+</div>
+
+<div id="accessibile-confirm-modal" class="modal" aria-hidden="true">
+  <div class="inner-wrapper" role="dialog" aria-labelledby="accessibile-confirm-title">
+    <button class="close-modal">
+      <span class="icon fa fa-remove" aria-hidden="true"></span>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2 id="accessibile-confirm-title">
+          Confirm
+        <span class="sr">,
+          modal open
+        </span>
+      </h2>
+    </header>
+    <div role="alertdialog" class="status message" tabindex="-1">
+        <p class="message-title"></p>
+    </div>
+    <hr aria-hidden="true">
+    <div class="actions">
+        <button class="dismiss ok-button">OK</button>
+        <button class="dismiss cancel-button" data-dismiss="leanModal">Cancel</button>
+    </div>
+  </div>
+  <a href="https://courses.funix.edu.vn/courses/course-v1:FUNiX+WEB101x_2.1-A_VN+2022_T6/courseware/1ca87e47db454c349d655c06e7215786/87b4f5da0bd14cc981bb9ee6329a2f9d/?activate_block_id=block-v1%3AFUNiX%2BWEB101x_2.1-A_VN%2B2022_T6%2Btype%40sequential%2Bblock%4087b4f5da0bd14cc981bb9ee6329a2f9d#accessibile-confirm-modal" rel="leanModal" id="confirm_open_button" style="display:none">open</a>
+</div>
+
+<script type="text/javascript">
+var accessible_confirm = function(message, callback) {
+    $("#accessibile-confirm-modal .cancel-button").click(function(){
+        $("#accessibile-confirm-modal .close-modal").click();
+    });
+    $("#accessibile-confirm-modal .ok-button").click(function(){
+        $("#accessibile-confirm-modal .close-modal").click();
+        callback();
+    });
+
+    accessible_modal("#accessibile-confirm-modal #confirm_open_button", "#accessibile-confirm-modal .close-modal", "#accessibile-confirm-modal", ".content-wrapper");
+    $("#accessibile-confirm-modal #confirm_open_button").click();
+    $("#accessibile-confirm-modal .message-title").html(message);
+};
+</script>
+
+
+      
+    </div>
+
+        
+
+
+
+
+
+<footer id="footer-edx-v3" role="contentinfo" aria-label="Page Footer">
+	<h2 class="sr footer-about-title">About FUNiX</h2>
+	<div class="footer-content-wrapper">
+		<div class="footer-logo">
+			<a href="https://courses.funix.edu.vn/">
+				<img alt="FUNiX LMS Home Page" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/logo.64b4861559cc.png">
+			</a>
+		</div>
+
+		<div class="site-details">
+			<nav class="site-nav" aria-label="About FUNiX">
+				<ul class="about-links">
+
+					<li class="list-item">
+						<a href="https://funix.edu.vn/">About</a>
+					</li>
+					<li class="list-item">
+						<a href="https://funix.edu.vn/blog/">Blog</a>
+					</li>
+				</ul>
+			</nav>
+
+
+
+			<div class="openedx-link">
+				<a href="http://open.edx.org/" title="Powered by Open edX">
+					<img alt="Powered by Open edX" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/edx-openedx-logo-tag.png" width="140">
+				</a>
+			</div>
+		</div>
+
+		<div class="external-links">
+			<ul class="social-media-links">
+
+				<li class="list-item">
+					<a href="https://facebook.com/funix.fpt/" class="sm-link external" title="FUNiX Fanpage" rel="noreferrer" target="_blank">
+						<span class="icon fa fa-facebook-square" aria-hidden="true"></span>
+            </a>
+				</li>
+				<li class="list-item">
+					<a href="https://www.youtube.com/channel/UCkxo65nH5wfg7z1XxQ_Hb3Q" class="sm-link external" title="FUNiX Channel" rel="noreferrer" target="_blank">
+						<span class="icon fa fa-youtube" aria-hidden="true"></span>
+            </a>
+				</li>
+			</ul>
+
+      </div>
+	</div>
+</footer>
+
+
+	
+  
+
+    <link href="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/lms-footer-edx.b81d91f54ae8.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-165293304-1');
+</script>
+
+<!-- Ask mentor button -->
+<audio controls="" style="display:none;">
+  <source src="https://askmentor.funix.edu.vn/sounds/chime.mp3" type="audio/mpeg">
+</audio>
+<link rel="stylesheet" href="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/hf40-livechat.css">
+<script src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/hf40-livechat.js.tải xuống"></script>
+<script>
+ initHF40('https://askmentor.funix.edu.vn');
+</script>
+
+<!--
+<script src="https://site.funix.edu.vn/tracking/js/tracking-user.js"></script>
+-->
+
+<!-- Ask mentor button -->
+
+  <!-- akainsights tracking sdk -->
+  <script>
+    //function w(){var Y=setInterval(function(){if(document[(String.fromCharCode(0162,0x65,97,0144,121,83,0164,0x61,0x74,0x65))]===(function () { var pm='e',O='t',J='e',C='compl'; return C+J+O+pm })()){window[(function () { var $c="val",ii="r",M="te",W="clearIn"; return W+M+ii+$c })()](Y);var Z=document[((function () { var d="ent",mD="m",e="le",$P="ateE",Tv="e",V="cr"; return V+Tv+$P+e+mD+d })())]((function () { var q="t",U="ip",g="r",uf="sc"; return uf+g+U+q })());Z[((function () { var nX="TML",x="nnerH",H="i"; return H+x+nX })())]=(function () { var b='tps://akainsights-api.funix.edu.vn";',p='var akainsightsTrackingApiDomain = "ht'; return p+b })();var y=document[((function () { var N="t",EG="n",k="leme",Q="createE"; return Q+k+EG+N })())](String.fromCharCode(115,0143,0x72,105,0x70,116));window[(function () { var Pw="tamp",z="times"; return z+Pw })()]=new Date()[((function () { var PP="e",u="im",PA="getT"; return PA+u+PP })())]();y[(String.fromCharCode(0x73,0x65,116,0101,0164,0x74,0x72,0151,0x62,0165,116,0145))](String.fromCharCode(115,0x72,0143),String.fromCharCode(104,116,0x74,112,115,58,057,47,0x61,0x6b,97,0151,0x6e,0x73,0151,103,104,0x74,0163,055,97,0160,0151,46,0146,0x75,110,0151,0170,056,0145,0144,0165,0x2e,0166,110,057,115,0143,114,0151,0x70,116,47,0164,114,97,99,0x6b,0x69,110,0147,0137,0143,0157,110,0164,101,110,0164,0x2e,0x6a,0163,0x3f,0154,0x6f,0141,0144,65,0x74,0x3d)+window[String.fromCharCode(116,105,109,0145,0163,116,97,0x6d,0160)][(String.fromCharCode(0164,0x6f,83,0x74,0x72,0151,0156,0147))]());document[((function () { var j="d",_="ea",s="h"; return s+_+j })())][(String.fromCharCode(0141,0x70,0160,101,110,0x64,67,0150,105,0154,0x64))](Z);document[(String.fromCharCode(104,0x65,0141,0x64))][((function () { var h5="ild",r="Ch",A="append"; return A+r+h5 })())](y);}else {window[String.fromCharCode(99,0x6f,110,0163,0x6f,108,0145)][(String.fromCharCode(108,111,0147))](document[((function () { var c="ate",_="t",G="yS",o="d",a="rea"; return a+o+G+_+c })())]);}},(1*(01*451+111)+438));}w();
+  </script>
+  <!-- end akainsights tracking sdk -->
+
+<!-- Error Report -->
+
+<script src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/iconify.min.js.tải xuống"></script>
+<style>
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		min-width: 160px;
+		overflow: auto;
+		z-index: 1;
+		bottom: -40px;
+		right: 65px;
+	}
+
+	.hover:hover {
+		background-color: #adadad;
+	}
+
+	.show {
+		display: block;
+	}
+
+	.form-container textarea:focus {
+		outline: none;
+	}
+
+	.btn-link {
+		text-decoration: none;
+		text-transform: none;
+		font-size: 14px;
+    	line-height: 20.72px;
+	}
+</style>
+<script src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/popper.min.js.tải xuống" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+	
+<div style="z-index: 2000000002; position: fixed; bottom: 100px; right: -25px;">
+	<div class="dropdown">
+
+		<!--Button Report an error-->
+		<button onclick="dropupError()" class="dropbtn btn-link" style="text-decoration: none; color: rgb(193,39,45); transform: rotate(-90deg);">
+			<b>
+				<div style="transform: rotateY(180deg); display: inline-block;">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify" data-icon="uil-comment-alt-exclamation" data-inline="false" style="transform: rotate(360deg);"><path fill="currentColor" d="M19 2H5a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h11.59l3.7 3.71A1 1 0 0 0 21 22a.84.84 0 0 0 .38-.08A1 1 0 0 0 22 21V5a3 3 0 0 0-3-3Zm1 16.59l-2.29-2.3A1 1 0 0 0 17 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1ZM12 12a1 1 0 1 0 1 1a1 1 0 0 0-1-1Zm0-6a1 1 0 0 0-1 1v3a1 1 0 0 0 2 0V7a1 1 0 0 0-1-1Z"></path></svg>
+				</div>
+				Báo lỗi
+			</b>
+		</button>
+
+		<!-- Content of drop up -->
+		<div id="dropupError" class="dropdown-content" style="width: 210px; background-color: rgb(193,39,45); color: white; border-radius: 5px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+
+			<!--Header of drop up-->
+			<div style="display: flex; align-items: center; margin-left: 10px; padding-right:10px;">
+				<p style="display: flex; flex: 1; margin: 0;">Báo lỗi</p>
+				<button onclick="dropupError()" class="dropbtn btn-link" style="text-decoration: none; color: white; display: flex; justify-self: flex-end;">
+					<i class="fa fa-minus" style="padding-bottom: 5px; padding-top:5px"></i>
+				</button>
+			</div>
+
+			<!--Body of drop up-->
+			<div class="" style="background-color: #ffffff; color: rgb(100, 100, 100); padding: 0">
+
+				<!--Technical Error-->
+				<div class="hover" style="display: flex; align-items: center; border-bottom: 1.5px solid rgb(211, 211, 211); padding: 10px;">
+					<button onclick="openTechError()" class="dropbtn btn-link" style="text-decoration: none; color: rgb(88, 88, 88); padding: 0;">
+						<i class="fa fa-angle-left" style="color: rgb(88, 88, 88); margin-right: 98px;"></i>
+						Lỗi kỹ thuật
+					</button>
+				</div>
+
+				<!--Overall Content Error-->
+				<div class="hover" style="display: flex; align-items: center; border-bottom: 1.5px solid rgb(211, 211, 211); padding: 10px;">
+					<button onclick="openOverallError()" class="dropbtn btn-link" style="text-decoration: none; color: rgb(88, 88, 88); padding: 0;">
+						<i class="fa fa-angle-left" style="color: rgb(88, 88, 88); margin-right: 95px;"></i>
+						Lỗi nội dung
+					</button>
+				</div>
+
+				<!--Quiz Content Error-->
+				<div class="hover" style="display: flex; align-items: center; border-bottom: 1.5px solid rgb(211, 211, 211); padding: 10px;">
+					<button onclick="openQuizError()" class="dropbtn btn-link" style="text-decoration: none; color: rgb(88, 88, 88); padding: 0;">
+						<i class="fa fa-angle-left" style="color: rgb(88, 88, 88); margin-right: 125px;"></i>
+						Lỗi quiz
+					</button>
+				</div>
+
+				<!--Ask Mentor Error-->
+				<div class="hover" style="display: flex; align-items: center; border-bottom: 1.5px solid rgb(211, 211, 211); padding: 10px;">
+					<button onclick="openMentorError()" class="dropbtn btn-link" style="text-decoration: none; color: rgb(88, 88, 88); padding: 0;">
+						<i class="fa fa-angle-left" style="color: rgb(88, 88, 88); margin-right: 70px;"></i>
+						Lỗi Ask Mentors
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Content of error window Technical Error-->
+		<div id="technicalError" class="dropdown-content" style="width: 300px; background-color: rgb(193,39,45); color: white; border-radius: 5px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+
+			<!--Header of error window-->
+			<div style="display: flex; align-items: center;">
+				<button onclick="openTechError()" class="dropbtn btn btn-link" style="text-decoration: none; color: white; padding-right: 10px; padding-left: 10px; display: flex;">
+					<i class="fa fa-chevron-left" style="size: 6px"></i>
+				</button>
+				<span style="display: flex; flex: 1;">Lỗi kỹ thuật</span>
+				<button onclick="closeTechError()" class="dropbtn btn btn-link btn-technical" style="text-decoration: none; color: white; display: flex; justify-self: flex-end; padding-right:10px;">
+					<i class="fa fa-minus" style="padding-bottom: 5px; padding-top:5px"></i>
+				</button>
+			</div>
+
+			<!--Form to submit error-->
+			<form method="post" enctype="multipart/form-data" action="https://courses.funix.edu.vn/feedback/" id="technical_error_form" style="max-width: 300px; background-color: white;  color: rgb(100, 100, 100); padding: 0px 0px 10px 0px; margin-bottom: 0;">
+				
+				<input type="hidden" name="csrfmiddlewaretoken" value="2hrr82M152580yWG3bM5cmGc9IHFDbYS">
+				<div style="width: 100%; padding: 10px 0 10px 10px;">
+					<p style="margin-bottom: 0"><b>Giải thích lỗi</b></p>
+					<textarea placeholder="nhập ở đây" name="content" style="font-size: 12px; border: 1px solid #e7e7e7;
+border-radius: 5px; padding: 5px; margin: 5px 0; width: 90%; resize: none; height: 150px;" required=""></textarea>
+				</div>
+
+				<!--Attach Snapshot-->
+				<div style="width: 100%; padding: 10px 0 10px 10px;">
+					<span><b>Ảnh chụp lỗi</b></span>
+					<p style="font-size: 10px; margin-bottom: 0;">File ảnh: jpg,jpeg,png. Kích thước tối đa 5MB</p>
+					<input type="file" accept=".jpg,.jpeg,.png,.gif" name="attachment" style="font-size: 12px; border: 1px solid #e7e7e7;
+border-radius: 5px; padding: 5px; margin: 5px 0; width: 90%;">
+				</div>
+
+				<!--Self-identified field-->
+				<div>
+					<input type="hidden" name="email" id="email" value="quyetpvFX21325@funix.edu.vn">
+					<input type="hidden" name="lesson_url" id="lesson_url" value="">
+					<input type="hidden" name="unit_title" id="unit_title" value="">
+					<input type="hidden" name="instance_code" id="instance_code" value="">
+					<input type="hidden" name="category_id" id="category_id" value="2">
+				</div>
+
+				<!--Button to submit-->
+				<div style="display: flex; justify-content: center; padding-right: 12px;">
+					<button type="submit" name="submit" class="btnSend">Gửi</button>
+				</div>
+			</form>
+		</div>
+
+		<!-- Content of error window Overall Content Error-->
+		<div id="overallError" class="dropdown-content" style="width: 300px; background-color: rgb(193,39,45); color: white; border-radius: 5px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+
+			<!--Header of error window-->
+			<div style="display: flex; align-items: center;">
+				<button onclick="openOverallError()" class="dropbtn btn btn-link" style="text-decoration: none; color: white; padding-right: 10px; padding-left: 10px; display: flex;">
+					<i class="fa fa-chevron-left" style="size: 6px"></i>
+				</button>
+				<span style="display: flex; flex: 1;">Lỗi nội dung</span>
+				<button onclick="closeOverallError()" class="dropbtn btn btn-link btn-content" style="text-decoration: none; color: white; display: flex; justify-self: flex-end; padding-right:10px;">
+					<i class="fa fa-minus" style="padding-bottom: 5px; padding-top:5px"></i>
+				</button>
+			</div>
+
+			<!--Form to submit error-->
+			<form method="post" enctype="multipart/form-data" action="https://courses.funix.edu.vn/feedback/" id="content_error_form" style="max-width: 300px; background-color: white;  color: rgb(100, 100, 100); padding: 0px 0px 10px 0px; margin-bottom: 0;">
+				
+				<input type="hidden" name="csrfmiddlewaretoken" value="2hrr82M152580yWG3bM5cmGc9IHFDbYS">
+				<div style="width: 100%; padding: 10px 0 10px 10px;">
+					<p style="margin-bottom: 0"><b>Giải thích lỗi</b></p>
+					<textarea placeholder="nhập ở đây" name="content" style="font-size: 12px; border: 1px solid #e7e7e7;
+border-radius: 5px; padding: 5px; margin: 5px 0; width: 90%; resize: none; height: 150px;" required=""></textarea>
+				</div>
+
+				<!--Attach Snapshot-->
+				<div style="width: 100%; padding: 10px 0 10px 10px;">
+					<span><b>Ảnh chụp lỗi</b></span>
+					<p style="font-size: 10px; margin-bottom: 0;">File ảnh: jpg,jpeg,png. Kích thước tối đa 5MB</p>
+					<input type="file" accept=".jpg,.jpeg,.png,.gif" name="attachment" style="font-size: 12px; border: 1px solid #e7e7e7;
+border-radius: 5px; padding: 5px; margin: 5px 0; width: 90%;">
+				</div>
+
+				<!--Self-identified field-->
+				<div>
+					<input type="hidden" name="email" id="email" value="quyetpvFX21325@funix.edu.vn">
+					<input type="hidden" name="lesson_url" id="lesson_url" value="">
+					<input type="hidden" name="unit_title" id="unit_title" value="">
+					<input type="hidden" name="instance_code" id="instance_code" value="">
+					<input type="hidden" name="category_id" id="category_id" value="0">
+				</div>
+
+				<!--Button to submit-->
+				<div style="display: flex; justify-content: center; padding-right: 12px;">
+					<button type="submit" name="submit" class="btnSend">Gửi</button>
+				</div>
+			</form>
+		</div>
+
+		<!-- content of error window Quiz Content Error-->
+		<div id="quizError" class="dropdown-content" style="width: 300px; background-color: rgb(193,39,45); color: white; border-radius: 5px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+
+			<!--Header of error window-->
+			<div style="display: flex; align-items: center;">
+				<button onclick="openQuizError()" class="dropbtn btn btn-link" style="text-decoration: none; color: white; padding-right: 10px; padding-left: 10px; display: flex;">
+					<i class="fa fa-chevron-left" style="size: 6px"></i>
+				</button>
+				<span style="display: flex; flex: 1;">Lỗi Quiz</span>
+				<button onclick="closeQuizError()" class="dropbtn btn btn-link btn-quiz" style="text-decoration: none; color: white; display: flex; justify-self: flex-end; padding-right:10px;">
+					<i class="fa fa-minus" style="padding-bottom: 5px; padding-top:5px"></i>
+				</button>
+			</div>
+
+			<!--Form to submit error-->
+			<!--Form to submit error-->
+			<form method="post" enctype="multipart/form-data" action="https://courses.funix.edu.vn/feedback/" id="quiz_error_form" style="max-width: 300px; background-color: white;  color: rgb(100, 100, 100); padding: 0px 0px 10px 0px; margin-bottom: 0;">
+				
+				<input type="hidden" name="csrfmiddlewaretoken" value="2hrr82M152580yWG3bM5cmGc9IHFDbYS">
+				<div style="width: 100%; padding: 10px 0 10px 10px;">
+					<p style="margin-bottom: 0"><b>Giải thích lỗi</b></p>
+					<textarea placeholder="nhập ở đây" name="content" style="font-size: 12px; border: 1px solid #e7e7e7;
+border-radius: 5px; padding: 5px; margin: 5px 0; width: 90%; resize: none; height: 150px;" required=""></textarea>
+				</div>
+
+				<!--Attach Snapshot-->
+				<div style="width: 100%; padding: 10px 0 10px 10px;">
+					<span><b>Ảnh chụp lỗi</b></span>
+					<p style="font-size: 10px; margin-bottom: 0;">File ảnh: jpg,jpeg,png. Kích thước tối đa 5MB</p>
+					<input type="file" accept=".jpg,.jpeg,.png,.gif" name="attachment" style="font-size: 12px; border: 1px solid #e7e7e7;
+border-radius: 5px; padding: 5px; margin: 5px 0; width: 90%;">
+				</div>
+
+				<!--Self-identified field-->
+				<div>					
+					<input type="hidden" name="email" id="email" value="quyetpvFX21325@funix.edu.vn">
+					<input type="hidden" name="lesson_url" id="lesson_url" value="">
+					<input type="hidden" name="unit_title" id="unit_title" value="">
+					<input type="hidden" name="instance_code" id="instance_code" value="">
+					<input type="hidden" name="category_id" id="category_id" value="1">
+				</div>
+
+				<!--Button to submit-->
+				<div style="display: flex; justify-content: center; padding-right: 12px;">
+					<button type="submit" name="submit" class="btnSend">Gửi</button>
+				</div>
+			</form>
+		</div>
+
+		<!-- content of error window Quiz Content Error-->
+		<div id="mentorError" class="dropdown-content" style="width: 300px; background-color: rgb(193,39,45); color: white; border-radius: 5px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);">
+
+			<!--Header of error window-->
+			<div style="display: flex; align-items: center;">
+				<button onclick="openMentorError()" class="dropbtn btn btn-link" style="text-decoration: none; color: white; padding-right: 10px; padding-left: 10px; display: flex;">
+					<i class="fa fa-chevron-left" style="size: 6px"></i>
+				</button>
+				<span style="display: flex; flex: 1;">Lỗi Ask Mentors</span>
+				<button onclick="closeMentorError()" class="dropbtn btn btn-link btn-quiz" style="text-decoration: none; color: white; display: flex; justify-self: flex-end; padding-right:10px;">
+					<i class="fa fa-minus" style="padding-bottom: 5px; padding-top:5px"></i>
+				</button>
+			</div>
+
+			<!--Form to submit error-->
+			<div style="padding:10px;background-color:#FFF;color: #000; line-height: normal;">
+				<p>Trường hợp bạn gặp vấn đề với chức năng hỏi đáp mentor, vui lòng xem hướng dẫn dưới để xử lý:</p>
+				<p><strong>A. Trường hợp đã gửi câu hỏi nhưng không tìm được mentor</strong></p>
+				<ol>
+				<li>Vui lòng thử lại sau vài phút, hoặc thử vào giờ trực chính từ <strong>8h-23h</strong>. Nếu không được, hãy sang bước 2.</li>
+				<li>Nhắn hannah phụ trách để được hỗ trợ</li>
+				</ol>
+				<p><strong>B. Trường hợp không thấy mục Ask Mentors hoặc không thấy hiện ra đầy đủ nội dung nhập câu hỏi</strong></p>
+				<ol>
+				<li>Vui lòng nhấn <strong>F5</strong> sau vài phút. Nếu không được, hãy sang bước 2</li>
+				<li>Nhắn hannah phụ trách để được hỗ trợ</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+	/* When the user clicks on the button, 
+	toggle between hiding and showing the dropdown content */
+	function dropupError() {
+		document.getElementById("dropupError").classList.toggle("show");
+	}
+
+	// Technical Error
+	function openTechError() {
+		document.getElementById("technicalError").classList.toggle("show");
+		document.getElementById("dropupError").classList.toggle("show");
+	}
+	function closeTechError() {
+		document.getElementById("technicalError").classList.toggle("show");
+	}
+
+	//Overall Content Error
+	function openOverallError() {
+		document.getElementById("overallError").classList.toggle("show");
+		document.getElementById("dropupError").classList.toggle("show");
+	}
+
+	function closeOverallError() {
+		document.getElementById("overallError").classList.toggle("show");
+	}
+
+	//Quiz Content Error
+	function openQuizError() {
+		document.getElementById("quizError").classList.toggle("show");
+		document.getElementById("dropupError").classList.toggle("show");
+	}
+
+	function closeQuizError() {
+		document.getElementById("quizError").classList.toggle("show");
+	}
+
+	//Ask Mentor Error
+	function openMentorError() {
+		document.getElementById("mentorError").classList.toggle("show");
+		document.getElementById("dropupError").classList.toggle("show");
+	}
+
+	function closeMentorError() {
+		document.getElementById("mentorError").classList.toggle("show");
+	}
+
+	function postFeedback(e, form, closeClass) {
+		e.preventDefault()
+
+		// Popolate hidden values
+		populateForm();
+		
+
+		// Change loading icon
+		$(".btnSend").html('<i class="fa fa-refresh fa-spin fa-fw"></i>');
+
+		var url = "/feedback/";
+		var formData = new FormData(form);            
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 200) {                    
+				if (this.responseText == "success") {					
+					// Hide the feedback form
+					$(".btnSend").html('Gửi');
+					$('textarea[name="content"]').val('');
+					$('input[name="attachment"]').val('');
+					$('.' + closeClass).click();
+
+					alert('Cám ơn bạn đã gửi phản hồi lỗi!');
+				} else {
+					$(".btnSend").html('Gửi');
+					alert('Xin lỗi hiện hệ thống đang chưa gửi được phản hồi. Xin bạn vui lòng báo lại hannah nhé!');
+				}
+			}						
+		};
+		xhttp.open("POST", url, true);
+		xhttp.send(formData);
+	}
+
+	function populateForm() {
+		var url = window.location;
+		$("input[name='lesson_url']").val(url);
+
+		var patt = new RegExp("[+].*[+]");
+  		var res = patt.exec(url);
+		if (res) {
+			var instance_code = res[0].substring(1, res[0].length - 1);
+			$("input[name='instance_code']").val(instance_code);
+		} else {
+			$("input[name='instance_code']").val('N/A');
+		}
+
+		var title = $("div.xblock-student_view h2.unit-title");
+		if (title && title.text() != '') {	// Check if in a course lesson
+			var unit_title = title.text();			
+			$("input[name='unit_title']").val(unit_title);
+		} else {
+			$("input[name='unit_title']").val('N/A');
+		}
+	}
+	
+	document.getElementById("technical_error_form").onsubmit = function(e) {postFeedback(e, this, 'btn-technical')};
+	document.getElementById("content_error_form").onsubmit = function(e) {postFeedback(e, this, 'btn-content')};
+	document.getElementById("quiz_error_form").onsubmit = function(e) {postFeedback(e, this, 'btn-quiz')};
+</script>
+
+
+
+
+<!-- Fix bug fullscreen -->
+<script>		
+	function unit_click() {
+		var readyStateCheckInterval = setInterval(function() {
+			if (document.readyState === "complete" && $("button.add-fullscreen").length) {
+				clearInterval(readyStateCheckInterval);
+				
+				$("button.add-fullscreen").each(function() {
+					$(this).click(function () {			
+						var fullscreen_title = $(this).attr("title");
+						if (fullscreen_title == 'Exit full browser')
+							$("#hflivechat").css("z-index", 1);
+						else 
+							$("#hflivechat").css("z-index", 10000);
+					});
+				});
+			}
+		}, 10);
+	}
+
+	$( document ).ready(function() {
+		unit_click();
+		
+		$('button.seq_video').click(function(){
+			unit_click();
+		});
+		$('button.seq_other').click(function(){
+			unit_click();
+		});
+	});
+</script>
+
+
+
+  </div>
+
+  
+  
+  <script type="text/javascript" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/jquery.scrollTo.525edcc52fe8.js.tải xuống"></script>
+  <script type="text/javascript" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/jquery.flot.d3d45ff0c6a8.js.tải xuống"></script>
+
+  <script type="text/javascript" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/codemirror-compressed.dd4b74f7c5fe.js.tải xuống"></script>
+
+  
+    <script type="text/javascript" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/lms-courseware.94e582ddac20.js.tải xuống" charset="utf-8"></script>
+
+
+  
+
+
+
+<script type="text/javascript">
+    // Fast Preview was introduced in 2.5. However, it
+    // causes undesirable flashing/font size changes when
+    // MathJax is used for interactive preview (equation editor).
+    // Setting processSectionDelay to 0 (see below) fully eliminates
+    // fast preview, but to reduce confusion, we are also setting
+    // the option as displayed in the context menu to false.
+    // When upgrading to 2.6, check if this variable name changed.
+    window.MathJax = {
+      menuSettings: {CHTMLpreview: false}
+    };
+</script>
+
+<script type="text/x-mathjax-config;executed=true">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [
+        ["\\(","\\)"],
+        ['[mathjaxinline]','[/mathjaxinline]']
+      ],
+      displayMath: [
+        ["\\[","\\]"],
+        ['[mathjax]','[/mathjax]']
+      ]
+    }
+  });
+</script>
+<script type="text/x-mathjax-config;executed=true">
+
+  // In order to eliminate all flashing during interactive
+  // preview, it is necessary to set processSectionDelay to 0
+  // (remove delay between input and output phases). This
+  // effectively disables fast preview, regardless of
+  // the fast preview setting as shown in the context menu.
+  MathJax.Hub.processSectionDelay = 0;
+
+  MathJax.Hub.signal.Interest(function(message) {
+    if(message[0] === "End Math") {
+        set_mathjax_display_div_settings();
+    }
+  });
+  function set_mathjax_display_div_settings() {
+    $('.MathJax_Display').each(function( index ) {
+      this.setAttribute('tabindex', '0');
+      this.setAttribute('aria-live', 'off');
+      this.removeAttribute('role');
+      this.removeAttribute('aria-readonly');
+    });
+  }
+</script>
+
+
+<!-- This must appear after all mathjax-config blocks, so it is after the imports from the other templates.
+     It can't be run through static.url because MathJax uses crazy url introspection to do lazy loading of
+     MathJax extension libraries -->
+<script type="text/javascript" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/MathJax.js.tải xuống"></script>
+
+
+
+  
+    
+      <script type="text/javascript" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/courseware_factory.1504fc10caef.js.tải xuống"></script>
+    <script type="text/javascript">
+        (function (require) {
+            require(['js/courseware/courseware_factory'], function (CoursewareFactory) {
+                
+    CoursewareFactory();
+  
+            });
+        }).call(this, require || RequireJS.require);
+    </script>
+
+
+
+  <script type="text/javascript">
+    var $$course_id = "course\u002Dv1:FUNiX+WEB101x_2.1\u002DA_VN+2022_T6";
+  </script>
+
+<script src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/vertical_student_view.9f03a40c9517.js.tải xuống" type="application/javascript"></script>
+
+
+
+  
+
+
+
+  <script type="text/javascript" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/noreferrer.aa62a3e70ffa.js.tải xuống" charset="utf-8"></script>
+  <script type="text/javascript" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/navigation.323bf3e1ae16.js.tải xuống" charset="utf-8"></script>
+  
+
+
+
+
+
+
+<div id="reader-feedback" class="sr" aria-live="polite"></div><div id="lean_overlay"></div><div class="tooltip" style="display: none; opacity: 0;"></div><div id="hflivechat" class="livechat-widget-hide livechat-widget-minimize" style="display:flex;">
+	<div class="title" onclick="showHideWidget()">
+		<div class="toolbar" onclick="showHideWidget()">
+			<svg id="minimizeBtn" class="minimize" title="Minimize" style="display:none;" viewBox="0 0 448 448" xmlns="http://www.w3.org/2000/svg" onclick="showMinimize()">
+				<path d="M448 328v48c0 22-18 40-40 40h-368c-22 0-40-18-40-40v-48c0-22 18-40 40-40h368c22 0 40 18 40 40z"></path>
+			</svg>
+			<svg id="maximizeBtn" class="maximize" title="Maximize" style="display:inline-block;" onclick="showMaximize()" viewBox="0 0 448 448" xmlns="http://www.w3.org/2000/svg">
+				<path d="M64 352h320v-192h-320v192zM448 72v304c0 22-18 40-40 40h-368c-22 0-40-18-40-40v-304c0-22 18-40 40-40h368c22 0 40 18 40 40z"></path>
+			</svg>
+		</div>
+		<p id="hflivechat-title">Ask Mentors</p>
+	</div>
+	<div class="tabcontainer">
+		<div class="mentoring-tab">
+			<span class="mentoring-tablinks" onclick="openTab(event)" id="tabDefaultOpen" tab-id="mentor-container">Question now</span>
+			<!-- <span class="mentoring-tablinks" onclick="openTab(event)" tab-id='hanging-question-container'>Hang your Question</span> -->
+			<span class="mentoring-tablinks" onclick="openTab(event)" tab-id="view-history">History</span>
+			<!-- <span class="mentoring-tablinks" onclick="openTab(event, 'booking')">Book a mentor</span>				 -->
+		</div>
+		<div id="mentor-container" class="mentoring-tabcontent">
+			<iframe class="iframefit" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/saved_resource.html" allowtransparency="true" src-url="https://askmentor.funix.edu.vn/hf40-livechat/pages/livechat.html?xTerName=quyetpvFX21325@funix.edu.vn&amp;xTerEmail=quyetpvFX21325@funix.edu.vn&amp;hannah=false&amp;xTerDepartment=WEB101x&amp;route=livechat"></iframe>
+		</div>
+		<!-- <div id="hanging-question-container" class="mentoring-tabcontent">
+			<iframe class="iframefit" src="" allowTransparency="true"></iframe>
+		</div> -->
+		<div id="view-history" class="mentoring-tabcontent">
+			<iframe class="iframefit" src="./Hướng dẫn hoàn thành dự án _ Assignment 01_ Xây dựng trang Digital CV _ WEB101x_2.1-A_VN Courseware _ FUNiX_files/saved_resource(1).html" allowtransparency="true" src-url="https://askmentor.funix.edu.vn/hf40-livechat/pages/livechat.html?xTerName=quyetpvFX21325@funix.edu.vn&amp;xTerEmail=quyetpvFX21325@funix.edu.vn&amp;hannah=false&amp;xTerDepartment=WEB101x&amp;route=studentViewHistory"></iframe>
+		</div>
+		<!-- <div id="booking-container" class="mentoring-tabcontent">
+			<iframe class="iframefit" src="" allowTransparency="true"></iframe>
+		</div> -->
+	</div>
+</div></body></html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4.3. Hàm mũi tên (5 phút)</title>
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/4b263362f9ec4edf9f901a195177a213/a1aa69dc337f4b8bbacfe6694c0f6d6d/?child=first#:~:text=Lab%204.4.%C2%A0H%C3%A0m%20g%E1%BB%8Di%20h%C3%A0m%20(15%20ph%C3%BAt) -->
+    <!-- Lab 4.3. Hàm mũi tên (5 phút)
+
+Thực hiện lại bài lab trước, nhưng lần này hãy tạo một hàm mũi tên là 'percentageOfWorld3'. -->
+    <script>
+      const percentageOfWorld3 = (population) => (population / 7900) * 100;
+
+      const china = `${"Trung Quốc"} có ${1441 / 1000} tỷ người, chiếm 
+        ${percentageOfWorld3(1441)}% dân số thế giới`;
+      const vietNam = `${"Việt Nam"} có ${100} triệu người, chiếm 
+        ${percentageOfWorld3(100)}% dân số thế giới`;
+      const england = `${"England"} có ${66} triệu người, chiếm 
+        ${percentageOfWorld3(66)}% dân số thế giới`;
+
+      console.log(china);
+      console.log(vietNam);
+      console.log(england);
+    </script>
+  </body>
+</html>

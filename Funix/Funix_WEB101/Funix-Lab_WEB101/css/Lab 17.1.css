@@ -1,0 +1,23 @@
+.bg-img1 {
+  background-color: #000;
+  background-size: cover;
+  background-image: url(https://wallpaperaccess.com/full/31189.jpg);
+}
+
+.bg-img2 {
+  background-color: #000;
+  background-size: cover;
+  background-image: url(https://images.hdqwalls.com/wallpapers/green-road-nature-4k-a6.jpg);
+}
+
+.bg-img3 {
+  background-color: #000;
+  background-size: cover;
+  background-image: url(https://i.pinimg.com/originals/15/ec/ac/15ecacead0204cebd386def4fcf860fb.jpg);
+}
+
+
+/*//////////////////////////////////////////*/
+.carousel-inner .carousel-item {
+  height: 70vh;
+}

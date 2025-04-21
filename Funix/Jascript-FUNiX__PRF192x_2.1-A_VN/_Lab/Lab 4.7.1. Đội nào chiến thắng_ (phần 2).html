@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4.7.1. Đội nào chiến thắng? (phần 2)</title>
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/4b263362f9ec4edf9f901a195177a213/a1aa69dc337f4b8bbacfe6694c0f6d6d/?child=first#:~:text=Lab%204.7.1.%20%C4%90%E1%BB%99i%20n%C3%A0o%20chi%E1%BA%BFn%20th%E1%BA%AFng%3F%20(ph%E1%BA%A7n%202) -->
+    <!-- Lab 4.7.1. Đội nào chiến thắng? (phần 2)
+
+Quay trở lại với hai đội thể dục dụng cụ: Dolphins và Koalas! Có một quy tắc mới cho môn thể dục này, có cơ chế khác hẳn. Mỗi đội thi đấu 3 lần, sau đó tính trung bình 3 lượt điểm số (điểm trung bình mỗi đội). Một đội sẽ giành chiến thắng chỉ khi có số điểm trung bình ít nhất là gấp đôi so với điểm của đội còn lại. Nếu không, sẽ không có đội nào thắng cả!
+
+1. Nhiệm vụ của bạn:
+
+Tạo hàm mũi tên 'calcAverage' để tính trung bình của 3 điểm số.
+Sử dụng hàm để tính trung bình của cả hai đội.
+Tạo hàm 'checkWinner' nhận điểm trung bình của mỗi đội làm tham số ('avgDolphins' và 'avgKoalas'), sau đó in đội thắng ra console cùng với số điểm giành chiến thắng theo luật trên. Ví dụ: "Koalas win (30 vs. 13)".
+Dùng hàm 'checkWinner' để xác định đội chiến thắng cho cả Dữ liệu 1 và Dữ liệu 2.
+Lần này hãy bỏ qua việc hòa.
+2. Dữ liệu kiểm tra:
+
+Dữ liệu 1: Dolphins ghi được 44, 23 và 71 điểm. Koalas ghi được 65, 54 và 49 điểm.
+Dữ liệu 2: Dolphins ghi được 85, 54 và 41 điểm. Koalas ghi được 23, 34 và 27 điểm.
+Gợi ý:
+
+Để tính trung bình 3 giá trị, hãy cộng tất cả chúng lại và chia cho 3.
+Để kiểm tra xem số A ít nhất có gấp đôi số B không, hãy thử A >= (2*B). Áp dụng điều này cho điểm trung bình của đội. -->
+    <script>
+      const calcAverage = (a, b, c) => (a + b + c) / 3;
+
+      const checkWinner = function (avgDolphins, avgKoalas) {
+        if (avgDolphins >= 2 * avgKoalas) {
+          console.log(`Dolphins win 🏆 (${avgDolphins} vs. ${avgKoalas})`);
+        } else if (avgKoalas >= 2 * avgDolphins) {
+          console.log(`Koalas win 🏆 (${avgKoalas} vs. ${avgDolphins})`);
+        } else {
+          console.log("No team wins... 😭");
+        }
+      };
+
+      // Test 1
+      // let scoreDolphins = calcAverage(44, 23, 71);
+      // let scoreKoalas = calcAverage(65, 54, 49);
+      // console.log(scoreDolphins, scoreKoalas);
+      // checkWinner(scoreDolphins, scoreKoalas);
+
+      // Test 2
+      scoreDolphins = calcAverage(85, 54, 41);
+      scoreKoalas = calcAverage(23, 34, 27);
+      console.log(scoreDolphins, scoreKoalas);
+      checkWinner(scoreDolphins, scoreKoalas);
+    </script>
+  </body>
+</html>

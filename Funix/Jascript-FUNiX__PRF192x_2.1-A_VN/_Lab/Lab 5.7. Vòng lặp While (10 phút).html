@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 5.7. Vòng lặp While (10 phút)</title>
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/4b263362f9ec4edf9f901a195177a213/234405fcf9ca45afa80abf166cffd91e/?child=first#:~:text=Lab%205.7.%C2%A0V%C3%B2ng%20l%E1%BA%B7p%20While%20(10%20ph%C3%BAt) -->
+    <!-- Lab 5.7. Vòng lặp While (10 phút)
+
+Với đề bài tương tự Lab 5.5 Lặp trong array, break và continue, nhưng lần này hãy sử dựng vòng lặp while (gọi array 'percentages3').
+Bạn thích giải pháp nào hơn cho nhiệm vụ này: vòng lặp for hay vòng lặp while?
+Lưu ý: Sau khi hoàn thành bài lab ở trên, học viên lưu lại file bài làm trên máy tính cá nhân để phục vụ cho việc review lab sau này. Học viên cần hoàn thành tất cả các bài lab của môn học mới tiến hành đăng ký review. -->
+    <script>
+      //
+      function percentageOfWorld1(population) {
+        return (population / 7900) * 100;
+      }
+
+      const populations = [100, 1441, 66, 6];
+
+      const percentages = [
+        percentageOfWorld1(populations[0]),
+        percentageOfWorld1(populations[1]),
+        percentageOfWorld1(populations[2]),
+        percentageOfWorld1(populations[3]),
+      ];
+      const percentages3 = [];
+
+      let i = 0;
+      while (i < populations.length) {
+        percentages3[i] = percentageOfWorld1(populations[i]);
+        i++;
+      }
+
+      console.log(percentages);
+      console.log(percentages3);
+      // 2.
+      // Nhìn chung, áp dụng 2 cách lặp (for và while) cho bài này không có điểm gì quá nhiều khác biệt.
+      // Nhưng theo quan điểm riêng, vòng lặp for "có vẻ" phù hợp hơn trong trường hợp này.
+      // Vì vòng lặp này liên quan nhiều đến biến đếm, hơn là biểu thức điều kiện đúng sai,
+      // và vòng lặp này không quá cần thiết với "điểm mạnh linh hoạt" của vòng lặp while.
+      // Vậy nên, dùng for là một cách khá tối ưu, dễ hiểu và ngắn gọn hơn cả.
+    </script>
+  </body>
+</html>

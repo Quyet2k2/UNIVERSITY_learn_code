@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.OnClass"
+        tools:targetApi="31">
+        <!-- ============================================= -->
+        <!-- ============================================= -->
+        <!-- android:name="._1_SlideChapter2.C1_Page56_TextView_EditText_CheckBox_Btn_ImageButton" -->
+        <!-- android:name="._2_Model.C2_ListViewBasic" -->
+        <!-- android:name="._3_Weather_ListViewCustom.C3_Weather_MainListViewCustom" -->
+        <!-- android:name="._4_DanhBa_ListViewCustom.C4_DanhBa_ListViewCustom" -->
+        <!-- android:name="._5_Music_ListViewCustom.C5_Music_ListViewCustom" -->
+        <!-- android:name="._6_DanhBa_Menu_intent.C6_DanhBa_Menu_intent" -->
+        <!-- android:name="._6_DanhBa_Menu_intent.C6_Main2_next_intent" -->
+        <!-- android:name="._7_thoiTiet_ListView_intent.C7_Thoitiet_Listview_Intent" -->
+        <!-- android:name="._7_thoiTiet_ListView_intent.C7_Thoitiet_Next_Intent" -->
+        <!-- android:name="._8_DanhBa_CSDL.C8_DanhBa_CSDL" -->
+        <!-- android:name="._8_DanhBa_CSDL.C8_DanhBa_next_CSDL" -->
+        <!-- android:name="._9_QL_NhanVien_CSDL.C9_QL_NhanVien_CSDL" -->
+        <!-- android:name=".z001_QL_SinhVien_CSDL.Z001_QL_SinhVien" -->
+        <!-- android:name=".z001_QL_SinhVien_CSDL.Z001_next_intent" -->
+        <!-- ============================================= -->
+        <activity
+            android:name=".z001_QL_SinhVien_CSDL.Z001_QL_SinhVien"
+            android:exported="true">
+
+            <!-- ============================================= -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- ============================================= -->
+        </activity>
+        <activity android:name=".z001_QL_SinhVien_CSDL.Z001_next_intent" />
+    </application>
+
+</manifest>

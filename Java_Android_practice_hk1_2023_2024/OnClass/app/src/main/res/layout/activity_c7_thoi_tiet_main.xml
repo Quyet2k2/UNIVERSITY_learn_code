@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context="._7_thoiTiet_ListView_intent.C7_Thoitiet_Listview_Intent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tên quốc gia:" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Tên quốc gia"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nhiệt độ:" />
+
+    <EditText
+        android:id="@+id/editDegree"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Nhiệt độ"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Thêm"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Sửa"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Xóa"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="View"
+        android:textAllCaps="false" />
+
+    <ListView
+        android:id="@+id/listThoiTiet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/activity_c7_thoi_tiet_item" />
+
+</LinearLayout>

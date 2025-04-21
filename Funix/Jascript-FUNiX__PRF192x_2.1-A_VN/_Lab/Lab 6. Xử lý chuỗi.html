@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 6. Xử lý chuỗi</title>
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/11340a391e3047ecba5b9df264c21e77/87bae353283d441aa3c714533f4512db/?child=first#:~:text=Bookmark%20this%20page-,Lab%206.%C2%A0X%E1%BB%AD%20l%C3%BD%20chu%E1%BB%97i,-Cho%20m%E1%BB%99t%20lo%E1%BA%A1t -->
+    <!-- Lab 6. Xử lý chuỗi
+
+Cho một loạt các nhiệt độ tối đa đã được dự báo, nhiệt kế hiển thị một string với các nhiệt độ đã cho. 
+Ví dụ: [17, 21, 23] sẽ in ra console "... 17ºC in 1 day ... 21ºC in 2 days ... 23ºC in 3 days ..."
+
+1. Nhiệm vụ của bạn
+
+Tạo hàm 'printForecast' lấy array 'arr' và in một string như trên ra console. Hãy thực hành với cả hai dữ liệu kiểm tra.
+2. Dữ liệu kiểm tra
+
+Dữ liệu 1: [17, 21, 23]
+Dữ liệu 2: [12, 5, -5, 0, 4]
+Lưu ý: 
+
+Sau khi hoàn thành bài lab ở trên, học viên lưu lại file bài làm trên máy tính cá nhân để phục vụ cho việc review lab sau này. 
+Học viên cần hoàn thành tất cả các bài lab của môn học mới tiến hành đăng ký review.
+
+Thời gian cần thiết để hoàn thành: 15 phút -->
+
+    <script>
+      //
+      const printForecast = (arr) => {
+        let str = `... ${arr[0]}ºC in ${1} day ... `;
+        for (let i = 1; i < arr.length; i++) {
+          str += `${arr[i]}ºC in ${i + 1} days ... `;
+        }
+
+        console.log(str);
+      };
+
+      printForecast([17, 21, 23]);
+      printForecast([12, 5, -5, 0, 4]);
+    </script>
+  </body>
+</html>

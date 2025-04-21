@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 10. DOM</title>
+    <link rel="stylesheet" href="./Lab 10. DOM/style.css" />
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/11340a391e3047ecba5b9df264c21e77/346467014211404693aa9b814eccdcce/?child=first#:~:text=Bookmark%20this%20page-,Lab%2010.%C2%A0DOM,-T%E1%BA%A1o%20t%C3%ADnh%20n%C4%83ng -->
+    <!-- Lab 10. DOM
+
+Tạo tính năng "chơi lại" cho trò chơi, để người chơi có thể đưa ra các dự đoán mới trong Project đoán số ở lab 7.
+
+1. Nhiệm vụ của bạn:
+
+Chọn phần tử với class "again" và đưa thêm vào một click event handler.
+Trong handle function, khôi phục các giá trị khởi tạo của 2 biến 'score' và 'secretNumber'.
+Khôi phục các điều kiện khởi tạo khác của các message, number, score, guess và các trường input khác.
+Khôi phục màu background ban đầu (#222) và chiều rộng của number (15rem).
+Lưu ý: 
+
+Sau khi hoàn thành bài lab ở trên, học viên lưu file bài làm trên máy tính cá nhân để phục vụ cho việc review lab sau này. Học viên cần hoàn thành tất cả các bài lab của môn học mới tiến hành đăng ký review.
+
+Thời gian cần thiết để hoàn thành: 30 phút -->
+    <header>
+      <h1>Guess My Number!</h1>
+      <p class="between">(Between 1 and 20)</p>
+      <button class="btn again">Again</button>
+      <div class="number">?</div>
+    </header>
+    <main>
+      <section class="left">
+        <input type="number" class="guess" />
+        <button class="btn check">Check!</button>
+      </section>
+      <section class="right">
+        <p class="message">Start guessing...</p>
+        <p class="label-score">💯 Score: <span class="score">20</span></p>
+        <p class="label-highscore">
+          🥇 Highscore: <span class="highscore">0</span>
+        </p>
+      </section>
+    </main>
+    <script src="./Lab 10. DOM/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 2.3. Các toán tử cơ bản (25 phút)</title>
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/4b263362f9ec4edf9f901a195177a213/3902863d5e314f6c99f25a5242e5c119/?activate_block_id=block-v1%3AFUNiX%2BPRF192x_2.1-A_VN%2B2022_T3%2Btype%40sequential%2Bblock%403902863d5e314f6c99f25a5242e5c119#:~:text=Lab%202.4.%20String%20v%C3%A0%C2%A0Template%20Literal%20(5%20ph%C3%BAt) -->
+    <!-- Lab 2.3. Các toán tử cơ bản (25 phút)
+
+        1. Nếu quốc gia của bạn bị chia cắt làm hai miền, mỗi miền gồm một nửa dân số của quốc gia, 
+            vậy sẽ có bao nhiêu người sống ở mỗi miền? Hãy sử dụng giá trị từ biến population để 
+            hoàn thành yêu cầu này, in ra màn hình console giá trị của population chia 2.
+
+        2. Tăng giá trị của biến population thêm 1 và in kết quả ra console.
+
+        3. Phần Lan có dân số là 6 triệu người. Kiểm tra xem quốc gia bạn có nhiều dân hơn 
+            so với Phần Lan không? Bạn cần in ra console xem giá trị population có lớn hơn 6 triệu không?
+
+        4. Dân số trung bình của một quốc gia là 33 triệu người. Kiểm tra xem quốc gia bạn có 
+            ít dân hơn so với các mức dân số trung bình không?
+
+        5. Dựa trên các biến bạn đã tạo, hãy tạo một biến mới là  'description', trong đó có chứa 
+            một string có định dạng sau: '<country> and its <population> million people speak <language>'. 
+            Bạn cần thay thế các giá trị trong <> thành các biến tương ứng. -->
+    <script>
+      const country = "VietNam";
+      const continent = "Asia";
+      let population = 100;
+
+      console.log(typeof country);
+      console.log(typeof continent);
+      console.log(typeof population);
+
+      ////////////////////// Lab 2.1
+      const isIsland = false;
+      const language = "Vietnamese";
+      console.log(typeof isIsland);
+      console.log(typeof language);
+
+      ////////////////////// Lab 2.2
+      // country = "VietNam";
+      // continent = "Asia";
+      population = 100;
+      // isIsland = false;
+      // language = "Vietnamese";
+
+      ////////////////////// Lab 2.3
+      console.log(population / 2);
+      console.log(population++);
+
+      if (population > 6) {
+        console.log(
+          `Dân số ${country} là ${population} triệu người, lớn hơn dân số Phần Lan là 6 triệu người!`
+        );
+      } else {
+        console.log(
+          `Dân số ${country} là ${population} triệu người, nhỏ hơn dân số Phần Lan là 6 triệu người!`
+        );
+      }
+
+      if (population > 33) {
+        console.log(
+          `Dân số ${country} là ${population} triệu người, lớn hơn dân số trung bình của 1 quốc gia là 33 triệu người!`
+        );
+      } else {
+        console.log(
+          `Dân số ${country} là ${population} triệu người, nhỏ hơn dân số trung bình của 1 quốc gia là 33 triệu người!`
+        );
+      }
+
+      const description =
+        country +
+        " and its " +
+        population +
+        " million people speak " +
+        language;
+      console.log(description);
+    </script>
+  </body>
+</html>

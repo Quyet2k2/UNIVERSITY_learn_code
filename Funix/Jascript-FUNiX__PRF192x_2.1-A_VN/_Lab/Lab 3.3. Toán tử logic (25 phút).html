@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 3.3. Toán tử logic (25 phút)</title>
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/4b263362f9ec4edf9f901a195177a213/ddfffe242aad4b209c6a38353eee28d2/?activate_block_id=block-v1%3AFUNiX%2BPRF192x_2.1-A_VN%2B2022_T3%2Btype%40sequential%2Bblock%40ddfffe242aad4b209c6a38353eee28d2#:~:text=Lab%203.3.%C2%A0To%C3%A1n%20t%E1%BB%AD%20logic%20(25%20ph%C3%BAt) -->
+    <!-- Lab 3.3. Toán tử logic (25 phút)
+
+        1. Hãy vô hiệu hóa code trước đó để prompt không xuất hiện.
+
+        2. Giả sử Sarah đang tìm một quốc gia mới để sinh sống. 
+        Cô ấy muốn ở một đất nước sử dụng ngôn ngữ Tiếng Anh, 
+        dân số ít hơn 50 triệu người và không phải đảo quốc.
+
+        3. Bạn cần tạo các biến tương ứng với tên đất nước, ngôn ngữ, dân số, 
+        có phải đảo quốc không. Giá trị các biến này sẽ được nhập bằng hàm prompt.
+        
+        4. Hãy viết một câu lệnh if giúp Sarah tìm kiếm quốc gia phù hợp. 
+        Bạn cần viết điều kiện đánh giá  tất cả các tiêu chí của Sarah. 
+        Hãy dành thời gian thực hiện điều này.
+        
+        5. Nếu đất nước nhập vào phù hợp, in ra string như sau: 
+        'You should live in <tên đất nước> :)'. Ngược lại, 
+            hãy in '<tên đất nước> does not meet your criteria :(' -->
+    <script>
+      // 1, 2, 3
+      const country = prompt("Mời nhập tên quốc gia!");
+      const language = String(prompt("Nhập ngôn ngữ!"));
+      const population = Number(
+        prompt("Nhập số lượng dân số! (là số với đơn vị triệu dân.)")
+      );
+      const isIsland =
+        prompt("Có phải là đảo không? (có | không)") === "có" ? true : false;
+
+      //   console.log(country, language, population, isIsland);
+
+      // 4 5
+      if (language === "english" && population < 50 && !isIsland)
+        console.log(`You should live in ${country} :)`);
+      else console.log(`${country} does not meet your criteria :('`);
+    </script>
+  </body>
+</html>

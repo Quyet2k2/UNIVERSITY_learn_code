@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 8. Cửa sổ modal</title>
+    <link rel="stylesheet" href="Lab 8. Cửa sổ modal/style.css" />
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/11340a391e3047ecba5b9df264c21e77/4b68b7ffd29c4e748ce4e58e07519818/?child=first#:~:text=Bookmark%20this%20page-,Lab%208.%C2%A0C%E1%BB%ADa%20s%E1%BB%95%20modal,-Trong%20b%C3%A0i%20lab -->
+    <!-- Lab 8. Cửa sổ modal
+
+Trong bài lab này, chúng ta hãy cùng nhau viết lại toàn bộ phần code cho project cửa sổ modal thông qua nội dung bài học ở các video từ 79 => 81.
+
+Kết quả cuối cùng Project sẽ là 1 màn hình chuyển trạng thái nho nhỏ với đầy đủ các chức năng:
+
+Lưu ý: 
+
+Học viên xem hết video 79 => 81 để làm lab này.
+Sau khi hoàn thành bài lab ở trên, học viên lưu lại file bài làm trên máy tính cá nhân để phục vụ cho việc review lab sau này. Học viên cần hoàn thành tất cả các bài lab của môn học mới tiến hành đăng ký review.
+Thời gian cần thiết để hoàn thành: 90 phút -->
+    <button class="show-modal">Show modal 1</button>
+    <button class="show-modal">Show modal 2</button>
+    <button class="show-modal">Show modal 3</button>
+
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>I'm a modal window</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa minima
+        tempora, tenetur dolorem cumque enim error modi atque harum! Illo,
+        dolores quae eos corporis magni officia. Cumque molestias autem quis
+        praesentium cupiditate aliquid dolor? Non dolorum commodi dignissimos
+        fuga sint voluptas facilis nobis nulla, nostrum minima debitis.
+        Possimus, nam laboriosam.
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <script src="Lab 8. Cửa sổ modal/script.js"></script>
+  </body>
+</html>

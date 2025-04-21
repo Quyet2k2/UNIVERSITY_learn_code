@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/btnViewItem"
+        android:title="Xem thông tin phần tử" android:enabled="false" />
+<item
+android:id="@+id/btnDeleteAllItem"
+android:title="Xóa tất cả phần tử" android:enabled="false" />
+    </menu>

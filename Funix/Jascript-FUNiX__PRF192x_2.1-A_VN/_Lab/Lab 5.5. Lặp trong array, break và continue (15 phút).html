@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 5.5. Lặp trong array, break và continue (15 phút)</title>
+  </head>
+  <body>
+    <!-- https://courses.funix.edu.vn/courses/course-v1:FUNiX+PRF192x_2.1-A_VN+2022_T3/courseware/4b263362f9ec4edf9f901a195177a213/234405fcf9ca45afa80abf166cffd91e/?child=first#:~:text=Lab%205.5.%C2%A0L%E1%BA%B7p%20trong%20array%2C%20break%20v%C3%A0%20continue%20(15%20ph%C3%BAt) -->
+    <!-- Lab 5.5. Lặp trong array, break và continue (15 phút)
+
+Hãy lấy lại array 'populations' từ bài lab trước.
+Sử dụng vòng lặp for để tạo array 'percentages2' chứa phần trăm dân số thế giới cho 4 giá trị population. Sử dụng hàm 'percentageOfWorld1' mà bạn đã tạo trước đó.
+Xác nhận rằng 'percentages2' chứa chính xác các giá trị trong array 'percentages' mà chúng ta đã tạo theo cách thủ công ở lab trước, để xem giải pháp này tốt hơn như thế nào. -->
+    <script>
+      //
+      function percentageOfWorld1(population) {
+        return (population / 7900) * 100;
+      }
+
+      const populations = [100, 1441, 66, 6];
+
+      const percentages = [
+        percentageOfWorld1(populations[0]),
+        percentageOfWorld1(populations[1]),
+        percentageOfWorld1(populations[2]),
+        percentageOfWorld1(populations[3]),
+      ];
+      const percentages2 = [];
+
+      for (let i = 0; i < populations.length; i++)
+        percentages2[i] = percentageOfWorld1(populations[i]);
+
+      console.log(percentages);
+      console.log(percentages2);
+    </script>
+  </body>
+</html>
